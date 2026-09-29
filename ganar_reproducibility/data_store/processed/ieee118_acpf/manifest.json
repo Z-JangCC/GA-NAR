@@ -1,0 +1,17 @@
+{
+  "system": "ieee118_acpf",
+  "sizes": [
+    20000,
+    2000,
+    2000
+  ],
+  "accepted_count": 24000,
+  "rejected_count": 0,
+  "protocol_hash": "42a9bf510d45be017a25f4670a68e30e75b87f635506bf148e5548d35d7b0cda",
+  "q_hash": "a6943fde6aa514bd6965e4040140146126ece673a0833609ceefe0382ef0a1fe",
+  "z_hash": "aac34cf08d7b33647dc44c5ebaf8eb3426aa52d137a87be7d9705571270701d0",
+  "split_hash": "01216d6b4cc317b31ef7cf2483810c9482dc3b4f5da50439440131285c29e17d",
+  "standardization_hash": "8681fecfc01cceaabf42c31b9c0737ce8f7f872e864067e82da0649c3f44aa87",
+  "dtype": "float64",
+  "quick": false
+}

@@ -1,0 +1,12 @@
+{
+  "manifest": "ganar_reproducibility_sources",
+  "version": "public",
+  "experiment_families": {
+    "nrgd_five_benchmark_descriptor": "results/nrgd_five_benchmark_descriptor",
+    "ganr_shared_physics_factorial": "results/ganr_shared_physics_factorial",
+    "ga_nar_lw_activation_matrix": "results/ga_nar_lw_activation_matrix",
+    "ga_nar_lw_controlled_ablation": "results/ga_nar_lw_controlled_ablation"
+  },
+  "weights_policy": "not_distributed; generated locally when training",
+  "process_names_excluded": true
+}

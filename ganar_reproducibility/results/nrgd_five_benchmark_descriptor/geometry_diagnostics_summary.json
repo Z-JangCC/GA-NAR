@@ -1,0 +1,67 @@
+[
+  {
+    "benchmark": "synthetic",
+    "centers": 384,
+    "diagnostic_centers": [
+      174,
+      241,
+      26
+    ],
+    "directions_per_center": 12,
+    "r90": 5,
+    "rank": 5,
+    "selected_scale": 0.02
+  },
+  {
+    "benchmark": "ieee118_rich",
+    "centers": 192,
+    "diagnostic_centers": [
+      143,
+      140,
+      88
+    ],
+    "directions_per_center": 12,
+    "r90": 5,
+    "rank": 6,
+    "selected_scale": 0.02
+  },
+  {
+    "benchmark": "coupled_duffing",
+    "centers": 512,
+    "diagnostic_centers": [
+      187,
+      422,
+      378
+    ],
+    "directions_per_center": 16,
+    "r90": 12,
+    "rank": 12,
+    "selected_scale": 0.02
+  },
+  {
+    "benchmark": "allen_cahn_2d",
+    "centers": 1536,
+    "diagnostic_centers": [
+      162,
+      831,
+      567
+    ],
+    "directions_per_center": 12,
+    "r90": 23,
+    "rank": 14,
+    "selected_scale": 0.02
+  },
+  {
+    "benchmark": "shallow_water_2d",
+    "centers": 1280,
+    "diagnostic_centers": [
+      146,
+      714,
+      434
+    ],
+    "directions_per_center": 16,
+    "r90": 44,
+    "rank": 16,
+    "selected_scale": 0.02
+  }
+]

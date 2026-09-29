@@ -1,0 +1,6 @@
+benchmark,alpha_std,mean_mode_fraction_std,constant_to_ga_nrl_mse_ratio,routing_heterogeneity_gate,recommendation
+synthetic,0.126578747689061,0.016902757430022137,1.5858404769357823,PASS,main routing benchmark
+ieee118_rich,0.10554641585506847,0.01950423050820513,2.7002934847394986,PASS,main routing benchmark
+coupled_duffing,0.040807891717991034,0.022305514025809055,0.9535301033048535,PASS,main routing benchmark
+allen_cahn_2d,0.12988114255138458,0.008491499774384738,21.99863255500844,PASS,main routing benchmark
+shallow_water_2d,0.06768482809078244,0.006711215254304538,13.42084759481476,PASS,main routing benchmark

@@ -1,0 +1,88 @@
+{
+  "audited": 84,
+  "tolerance": 1e-10,
+  "max_relative_error": 7.867275821912567e-15,
+  "failures_gt_tolerance": 0,
+  "top_errors": [
+    {
+      "relative_error": 7.867275821912567e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "ganar_softplus",
+      "seed": 2,
+      "replayed_mse": 4.3066137068441555e-07,
+      "saved_mse": 4.3066137068441216e-07
+    },
+    {
+      "relative_error": 3.0168520823937114e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "ganar_softplus",
+      "seed": 0,
+      "replayed_mse": 4.386986646805468e-07,
+      "saved_mse": 4.386986646805455e-07
+    },
+    {
+      "relative_error": 2.278158355400723e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "pm_softplus",
+      "seed": 2,
+      "replayed_mse": 4.461672009303204e-06,
+      "saved_mse": 4.461672009303194e-06
+    },
+    {
+      "relative_error": 2.210360171447524e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "generic_geometry_softplus",
+      "seed": 2,
+      "replayed_mse": 1.9160518683694792e-06,
+      "saved_mse": 1.916051868369475e-06
+    },
+    {
+      "relative_error": 2.1085131726536924e-15,
+      "system": "ieee118_acpf",
+      "model": "generic_geometry_swiglu",
+      "seed": 1,
+      "replayed_mse": 1.5064518417051069e-06,
+      "saved_mse": 1.5064518417051037e-06
+    },
+    {
+      "relative_error": 1.994647427679821e-15,
+      "system": "ieee118_acpf",
+      "model": "ganar_swiglu",
+      "seed": 1,
+      "replayed_mse": 1.3801221410736293e-06,
+      "saved_mse": 1.3801221410736265e-06
+    },
+    {
+      "relative_error": 1.987473157714401e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "capacity_softplus",
+      "seed": 2,
+      "replayed_mse": 1.917836348053004e-06,
+      "saved_mse": 1.9178363480530003e-06
+    },
+    {
+      "relative_error": 1.903011306539759e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "generic_geometry_gelu",
+      "seed": 1,
+      "replayed_mse": 3.3382603049050978e-06,
+      "saved_mse": 3.3382603049050914e-06
+    },
+    {
+      "relative_error": 1.9021744356476926e-15,
+      "system": "nonlinear_heat_fem",
+      "model": "capacity_gelu",
+      "seed": 1,
+      "replayed_mse": 3.339728988758146e-06,
+      "saved_mse": 3.3397289887581395e-06
+    },
+    {
+      "relative_error": 1.7554807610675703e-15,
+      "system": "ieee118_acpf",
+      "model": "generic_geometry_swiglu",
+      "seed": 2,
+      "replayed_mse": 1.5681499561991044e-06,
+      "saved_mse": 1.5681499561991017e-06
+    }
+  ]
+}

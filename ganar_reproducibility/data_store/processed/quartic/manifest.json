@@ -1,0 +1,17 @@
+{
+  "system": "quartic",
+  "sizes": [
+    1024,
+    0,
+    0
+  ],
+  "accepted_count": 1024,
+  "rejected_count": 0,
+  "protocol_hash": "42a9bf510d45be017a25f4670a68e30e75b87f635506bf148e5548d35d7b0cda",
+  "q_hash": "722219f730ead40d8596d1fd21df95260dfd42d79920954c2b4b3bf29bfbbcbb",
+  "z_hash": "2f5e08616694c24647b1e2c8a6aa91c34345bf1e537218802448ee381b384ccd",
+  "split_hash": "af16ae5849f7aced7df4717cf0b7e22b89f00bcdcbeaa2a4ebc4da0d07b78ab6",
+  "standardization_hash": "b8613e199d84a5226b8fc7a5f7dc1d858ee9a01e889b6edad52c0d4a2efbea9a",
+  "dtype": "float64",
+  "quick": false
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "h_rho": 0.02,
+    "h_pi": 0.02,
+    "rank": 10,
+    "rank_fraction": 0.10101010101010101,
+    "coverage": 1.0,
+    "projection_error": 0.7243637987293969,
+    "Q_sub": 0.23146545493028872,
+    "Q_int": 0.9196212674939368,
+    "Q_alloc": 0.9820409948421662,
+    "GRG_status": "UNRESOLVED"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "h_rho": 0.02,
+    "h_pi": 0.02,
+    "rank": 3,
+    "rank_fraction": 0.047619047619047616,
+    "coverage": 1.0,
+    "projection_error": 0.7563501477111868,
+    "Q_sub": 0.20648407838647384,
+    "Q_int": 0.8740350752451467,
+    "Q_alloc": 0.9335401395228091,
+    "GRG_status": "UNRESOLVED"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "h_rho": 0.02,
+    "h_pi": 0.02,
+    "rank": 5,
+    "rank_fraction": 0.3125,
+    "coverage": 1.0,
+    "projection_error": 0.13179532213721612,
+    "Q_sub": 0.6044856122837117,
+    "Q_int": 0.9809524328366609,
+    "Q_alloc": 0.9850996705781492,
+    "GRG_status": "UNRESOLVED"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "system": "kuramoto64",
+  "n_raw": 256,
+  "geometry_coverage": 1.0,
+  "allocation_coverage": 1.0,
+  "h": 0.02,
+  "status": "resolved",
+  "probe_hash": "a039d079d56879e67399ce72ca011d5e278135c8b3becfdcd1a1c5257e5aeb01"
+}

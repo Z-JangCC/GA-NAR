@@ -1,0 +1,17 @@
+{
+  "system": "kuramoto64",
+  "sizes": [
+    10000,
+    1000,
+    1000
+  ],
+  "accepted_count": 12000,
+  "rejected_count": 0,
+  "protocol_hash": "42a9bf510d45be017a25f4670a68e30e75b87f635506bf148e5548d35d7b0cda",
+  "q_hash": "1971c93d9a6f5b4f9eb564e9b7538e6cb56d06ecd8c913adc266aa123c7df0a1",
+  "z_hash": "08576b1c1b8843f74bb9ee397f54b5ebdf124fdb99f57a26a54d1080104406eb",
+  "split_hash": "ecfdab41872a7a368bffdec7229d1680023a81a3bdbf56ac0d86a57d3c5fe7b9",
+  "standardization_hash": "a12523d22206474508ad9cdfd204a0d9f66bdadbe2e18553e433460426f80850",
+  "dtype": "float64",
+  "quick": false
+}

@@ -1,0 +1,133 @@
+{
+  "ac_physics_skip": "base solution + symmetric finite-difference control sensitivity",
+  "created_at": "2026-09-24T03:45:18.338250+00:00",
+  "cuda_available": true,
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "data_protocol_version": 3,
+  "design_version": 7,
+  "device_request": "auto",
+  "geometry_weights": {
+    "ac_power": 0.03,
+    "allen_cahn": 0.0,
+    "controlled": 0.03,
+    "duffing": 0.0,
+    "ieee118": 0.01,
+    "shallow_water": 0.0
+  },
+  "job_count": 505,
+  "large_system_data_override": {
+    "probe_directions": 16,
+    "probe_size": 1024,
+    "systems": [
+      "allen_cahn",
+      "ieee118",
+      "shallow_water"
+    ],
+    "test_size": 2000,
+    "train_size": 10000,
+    "val_size": 1000
+  },
+  "modular_design_version": 2,
+  "numpy": "1.26.4",
+  "pandas": "2.2.2",
+  "platform": "Linux-6.17.0-23-generic-x86_64-with-glibc2.39",
+  "profile": {
+    "ablation_seeds": [
+      11
+    ],
+    "alpha_levels": [
+      0.1,
+      0.25,
+      0.4,
+      0.49
+    ],
+    "baselines": [
+      "relu",
+      "gelu",
+      "silu",
+      "swiglu",
+      "resmlp",
+      "fourier"
+    ],
+    "budget": {
+      "batch_size": 512,
+      "eval_interval": 125,
+      "main_steps": 2500,
+      "mechanism_steps": 1500,
+      "scale_steps": 2500
+    },
+    "condition_levels": [
+      1.0,
+      5.0,
+      15.0,
+      40.0
+    ],
+    "coupling_levels": [
+      0.0,
+      0.33,
+      0.66,
+      1.0
+    ],
+    "data": {
+      "geometry_step": 0.06,
+      "geometry_train_size": 50000,
+      "probe_directions": 16,
+      "probe_size": 1024,
+      "test_size": 10000,
+      "train_size": 50000,
+      "val_size": 5000
+    },
+    "depth_levels": [
+      2,
+      4,
+      8
+    ],
+    "interaction_levels": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "localization_levels": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "name": "full",
+    "rank_levels": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "reference_depth": 4,
+    "reference_width": 256,
+    "sample_levels": [
+      10000,
+      100000,
+      1000000
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "systems": [
+      "controlled",
+      "ac_power",
+      "duffing",
+      "ieee118",
+      "allen_cahn",
+      "shallow_water"
+    ],
+    "width_levels": [
+      128,
+      256,
+      512,
+      1024
+    ]
+  },
+  "python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:50:58) [GCC 12.3.0]",
+  "scipy": "1.15.1",
+  "torch": "2.9.1+cu130"
+}

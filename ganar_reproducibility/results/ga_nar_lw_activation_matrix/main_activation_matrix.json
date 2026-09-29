@@ -1,0 +1,596 @@
+[
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "activation": "relu",
+    "activation_label": "ReLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 2.5872923177621045e-06,
+    "baseline_sd_mse": 2.1032480759994358e-07,
+    "ganar_mean_mse": 2.37592816578036e-06,
+    "ganar_sd_mse": 1.8038418789231496e-07,
+    "relative_improvement": 0.08141188828009309,
+    "all_seeds_win": true,
+    "baseline_params": 300341,
+    "ganar_trainable_params": 313009,
+    "ganar_total_params": 1572960,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      2.666957725957129e-06,
+      2.348772443105461e-06,
+      2.746146784223724e-06
+    ],
+    "ganar_mse_by_seed": [
+      2.4416882143895887e-06,
+      2.1718898309946188e-06,
+      2.514206451956873e-06
+    ],
+    "delta_by_seed": [
+      -2.2526951156754027e-07,
+      -1.7688261211084229e-07,
+      -2.31940332266851e-07
+    ]
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "activation": "gelu",
+    "activation_label": "GELU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 3.990206721967145e-06,
+    "baseline_sd_mse": 7.170486772061426e-08,
+    "ganar_mean_mse": 3.53223941730069e-06,
+    "ganar_sd_mse": 6.871588304865548e-08,
+    "relative_improvement": 0.11478757806378466,
+    "all_seeds_win": true,
+    "baseline_params": 300341,
+    "ganar_trainable_params": 313009,
+    "ganar_total_params": 1572960,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.000618765376737e-06,
+      3.913865054705018e-06,
+      4.056136345819682e-06
+    ],
+    "ganar_mse_by_seed": [
+      3.534981396045961e-06,
+      3.4621935872105336e-06,
+      3.5995432686455753e-06
+    ],
+    "delta_by_seed": [
+      -4.6563736933077586e-07,
+      -4.516714674944845e-07,
+      -4.5659307717410697e-07
+    ]
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "activation": "silu",
+    "activation_label": "SiLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 4.348466757972212e-06,
+    "baseline_sd_mse": 1.238339245021292e-07,
+    "ganar_mean_mse": 3.808294137378184e-06,
+    "ganar_sd_mse": 1.367224009882934e-07,
+    "relative_improvement": 0.12434034153677757,
+    "all_seeds_win": true,
+    "baseline_params": 300341,
+    "ganar_trainable_params": 313009,
+    "ganar_total_params": 1572960,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.491292200428135e-06,
+      4.271094959797996e-06,
+      4.283013113690504e-06
+    ],
+    "ganar_mse_by_seed": [
+      3.966020593269978e-06,
+      3.7353291096547447e-06,
+      3.723532709209829e-06
+    ],
+    "delta_by_seed": [
+      -5.25271607158157e-07,
+      -5.357658501432515e-07,
+      -5.594804044806746e-07
+    ]
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "activation": "mish",
+    "activation_label": "Mish",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 3.8081879548202933e-06,
+    "baseline_sd_mse": 1.33226049721061e-07,
+    "ganar_mean_mse": 3.368859506355962e-06,
+    "ganar_sd_mse": 1.1939440867427077e-07,
+    "relative_improvement": 0.11537369518711103,
+    "all_seeds_win": true,
+    "baseline_params": 300341,
+    "ganar_trainable_params": 313009,
+    "ganar_total_params": 1572960,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      3.681564818853198e-06,
+      3.947157413355141e-06,
+      3.7958416322525407e-06
+    ],
+    "ganar_mse_by_seed": [
+      3.253667986507914e-06,
+      3.49205412403682e-06,
+      3.360856408523152e-06
+    ],
+    "delta_by_seed": [
+      -4.278968323452842e-07,
+      -4.55103289318321e-07,
+      -4.349852237293889e-07
+    ]
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "activation": "softplus",
+    "activation_label": "Softplus",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 4.707868734363467e-06,
+    "baseline_sd_mse": 2.2641053652304746e-07,
+    "ganar_mean_mse": 4.491865892529601e-06,
+    "ganar_sd_mse": 2.372202462198015e-07,
+    "relative_improvement": 0.046021212558077694,
+    "all_seeds_win": true,
+    "baseline_params": 300341,
+    "ganar_trainable_params": 313009,
+    "ganar_total_params": 1572960,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.957606191347918e-06,
+      4.516028870425746e-06,
+      4.649971141316737e-06
+    ],
+    "ganar_mse_by_seed": [
+      4.746273431473718e-06,
+      4.276735742983748e-06,
+      4.4525885031313365e-06
+    ],
+    "delta_by_seed": [
+      -2.1133275987419976e-07,
+      -2.3929312744199845e-07,
+      -1.9738263818540018e-07
+    ]
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "activation": "swiglu",
+    "activation_label": "SwiGLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 1.8249457237983227e-06,
+    "baseline_sd_mse": 8.34880465820098e-08,
+    "ganar_mean_mse": 1.4422985639834844e-06,
+    "ganar_sd_mse": 5.8925439690816015e-08,
+    "relative_improvement": 0.20945777879919555,
+    "all_seeds_win": true,
+    "baseline_params": 432437,
+    "ganar_trainable_params": 313009,
+    "ganar_total_params": 2001504,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      1.8277167739403538e-06,
+      1.7401066494743687e-06,
+      1.9070137479802453e-06
+    ],
+    "ganar_mse_by_seed": [
+      1.4754261457102674e-06,
+      1.3742650738839646e-06,
+      1.4772044723562205e-06
+    ],
+    "delta_by_seed": [
+      -3.5229062823008643e-07,
+      -3.658415755904041e-07,
+      -4.298092756240248e-07
+    ]
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "activation": "relu",
+    "activation_label": "ReLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 0.01867746726368834,
+    "baseline_sd_mse": 0.00025028090987782827,
+    "ganar_mean_mse": 0.001066877238246425,
+    "ganar_sd_mse": 0.00014531407929422948,
+    "relative_improvement": 0.9429171448574419,
+    "all_seeds_win": true,
+    "baseline_params": 280511,
+    "ganar_trainable_params": 239687,
+    "ganar_total_params": 1457034,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      0.018466439410335465,
+      0.018611981284864125,
+      0.01895398109586543
+    ],
+    "ganar_mse_by_seed": [
+      0.0010731163038279702,
+      0.0009185441138513142,
+      0.0012089712970599904
+    ],
+    "delta_by_seed": [
+      -0.017393323106507496,
+      -0.01769343717101281,
+      -0.017745009798805438
+    ]
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "activation": "gelu",
+    "activation_label": "GELU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 0.0003249702501890444,
+    "baseline_sd_mse": 4.064439012567529e-05,
+    "ganar_mean_mse": 0.0003190331611932361,
+    "ganar_sd_mse": 4.0007874827524426e-05,
+    "relative_improvement": 0.018253151288139747,
+    "all_seeds_win": true,
+    "baseline_params": 280511,
+    "ganar_trainable_params": 239687,
+    "ganar_total_params": 1457034,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      0.0003640843453139157,
+      0.0003278749950886983,
+      0.00028295141016451925
+    ],
+    "ganar_mse_by_seed": [
+      0.00035865407318283005,
+      0.00031979617228713124,
+      0.00027864923810974693
+    ],
+    "delta_by_seed": [
+      -5.430272131085631e-06,
+      -8.078822801567073e-06,
+      -4.3021720547723125e-06
+    ]
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "activation": "silu",
+    "activation_label": "SiLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 0.00022617999509415287,
+    "baseline_sd_mse": 8.336693215719309e-06,
+    "ganar_mean_mse": 0.00022146164038942449,
+    "ganar_sd_mse": 7.355735142809317e-06,
+    "relative_improvement": 0.020770733210349616,
+    "all_seeds_win": true,
+    "baseline_params": 280511,
+    "ganar_trainable_params": 239687,
+    "ganar_total_params": 1457034,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      0.00021687449980980125,
+      0.0002329672852886576,
+      0.0002286982001839997
+    ],
+    "ganar_mse_by_seed": [
+      0.00021334849819489287,
+      0.00022769525817650725,
+      0.00022334116479687336
+    ],
+    "delta_by_seed": [
+      -3.5260016149083818e-06,
+      -5.272027112150347e-06,
+      -5.357035387126331e-06
+    ]
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "activation": "mish",
+    "activation_label": "Mish",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 0.00024429378695737375,
+    "baseline_sd_mse": 9.22424165777647e-06,
+    "ganar_mean_mse": 0.00023912375306897282,
+    "ganar_sd_mse": 8.830104871954337e-06,
+    "relative_improvement": 0.021132439473109055,
+    "all_seeds_win": true,
+    "baseline_params": 280511,
+    "ganar_trainable_params": 239687,
+    "ganar_total_params": 1457034,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      0.00023675446101357014,
+      0.00025457924285077606,
+      0.00024154765700777503
+    ],
+    "ganar_mse_by_seed": [
+      0.00023296975490047603,
+      0.00024924113438406034,
+      0.00023516036992238208
+    ],
+    "delta_by_seed": [
+      -3.7847061130941054e-06,
+      -5.338108466715721e-06,
+      -6.3872870853929524e-06
+    ]
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "activation": "softplus",
+    "activation_label": "Softplus",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 0.00038715866127477433,
+    "baseline_sd_mse": 7.073149065202837e-06,
+    "ganar_mean_mse": 0.00038198339432406826,
+    "ganar_sd_mse": 6.946221875777065e-06,
+    "relative_improvement": 0.013363868170822982,
+    "all_seeds_win": true,
+    "baseline_params": 280511,
+    "ganar_trainable_params": 239687,
+    "ganar_total_params": 1457034,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      0.00037951137444019794,
+      0.0003934659896058279,
+      0.00038849861977829713
+    ],
+    "ganar_mse_by_seed": [
+      0.00037493720705485063,
+      0.00038882513709241514,
+      0.00038218783882493896
+    ],
+    "delta_by_seed": [
+      -4.57416738534731e-06,
+      -4.640852513412765e-06,
+      -6.3107809533581734e-06
+    ]
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "activation": "swiglu",
+    "activation_label": "SwiGLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 0.02360362787826682,
+    "baseline_sd_mse": 0.0007077123017476866,
+    "ganar_mean_mse": 0.004708421300131406,
+    "ganar_sd_mse": 8.463438557367138e-05,
+    "relative_improvement": 0.8003955282911507,
+    "all_seeds_win": true,
+    "baseline_params": 412607,
+    "ganar_trainable_params": 239687,
+    "ganar_total_params": 1885578,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      0.023276782461034044,
+      0.02441569205716587,
+      0.023118409116600534
+    ],
+    "ganar_mse_by_seed": [
+      0.004623614575319847,
+      0.0047087670378837985,
+      0.0047928822871905735
+    ],
+    "delta_by_seed": [
+      -0.018653167885714195,
+      -0.01970692501928207,
+      -0.01832552682940996
+    ]
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "activation": "relu",
+    "activation_label": "ReLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 2.3933623363916003e-06,
+    "baseline_sd_mse": 7.04743279635635e-08,
+    "ganar_mean_mse": 2.3417984451256353e-06,
+    "ganar_sd_mse": 7.315087941082071e-08,
+    "relative_improvement": 0.02157832227039652,
+    "all_seeds_win": true,
+    "baseline_params": 334609,
+    "ganar_trainable_params": 406010,
+    "ganar_total_params": 1767393,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      2.474619844839915e-06,
+      2.3489199366025034e-06,
+      2.356547227732383e-06
+    ],
+    "ganar_mse_by_seed": [
+      2.426039129181544e-06,
+      2.2943225899643892e-06,
+      2.3050336162309723e-06
+    ],
+    "delta_by_seed": [
+      -4.858071565837105e-08,
+      -5.459734663811416e-08,
+      -5.151361150141067e-08
+    ]
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "activation": "gelu",
+    "activation_label": "GELU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 4.4817845456653945e-06,
+    "baseline_sd_mse": 7.782468399621087e-08,
+    "ganar_mean_mse": 4.364377809591702e-06,
+    "ganar_sd_mse": 9.065154706578386e-08,
+    "relative_improvement": 0.026232845629762483,
+    "all_seeds_win": true,
+    "baseline_params": 334609,
+    "ganar_trainable_params": 406010,
+    "ganar_total_params": 1767393,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.427815088133357e-06,
+      4.570995914059335e-06,
+      4.44654263480349e-06
+    ],
+    "ganar_mse_by_seed": [
+      4.291778856094e-06,
+      4.465982316381882e-06,
+      4.335372256299224e-06
+    ],
+    "delta_by_seed": [
+      -1.3603623203935673e-07,
+      -1.0501359767745265e-07,
+      -1.1117037850426646e-07
+    ]
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "activation": "silu",
+    "activation_label": "SiLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 4.17743011478056e-06,
+    "baseline_sd_mse": 1.4229258791706632e-07,
+    "ganar_mean_mse": 4.060199226725794e-06,
+    "ganar_sd_mse": 1.3565850699171996e-07,
+    "relative_improvement": 0.028048760374971476,
+    "all_seeds_win": true,
+    "baseline_params": 334609,
+    "ganar_trainable_params": 406010,
+    "ganar_total_params": 1767393,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.1552632026658526e-06,
+      4.0475218988086406e-06,
+      4.329505242867187e-06
+    ],
+    "ganar_mse_by_seed": [
+      4.040734251163475e-06,
+      3.9353246323604665e-06,
+      4.204538796653442e-06
+    ],
+    "delta_by_seed": [
+      -1.145289515023778e-07,
+      -1.1219726644817402e-07,
+      -1.249664462137455e-07
+    ]
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "activation": "mish",
+    "activation_label": "Mish",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 4.648919140450999e-06,
+    "baseline_sd_mse": 1.9121763777281313e-07,
+    "ganar_mean_mse": 4.50196414764874e-06,
+    "ganar_sd_mse": 1.7776719389703353e-07,
+    "relative_improvement": 0.031555057227259854,
+    "all_seeds_win": true,
+    "baseline_params": 334609,
+    "ganar_trainable_params": 406010,
+    "ganar_total_params": 1767393,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.509144946864749e-06,
+      4.866831796188855e-06,
+      4.570780678299395e-06
+    ],
+    "ganar_mse_by_seed": [
+      4.39657025512977e-06,
+      4.707207056787615e-06,
+      4.4021151310288335e-06
+    ],
+    "delta_by_seed": [
+      -1.125746917349783e-07,
+      -1.596247394012397e-07,
+      -1.686655472705612e-07
+    ]
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "activation": "softplus",
+    "activation_label": "Softplus",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 4.4611465507776135e-06,
+    "baseline_sd_mse": 6.263814331110934e-08,
+    "ganar_mean_mse": 1.4816179427419725e-06,
+    "ganar_sd_mse": 5.2656675266568685e-08,
+    "relative_improvement": 0.6678458979639673,
+    "all_seeds_win": true,
+    "baseline_params": 334609,
+    "ganar_trainable_params": 406010,
+    "ganar_total_params": 1767393,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      4.523520311817733e-06,
+      4.398247331211914e-06,
+      4.461672009303194e-06
+    ],
+    "ganar_mse_by_seed": [
+      1.515391195364629e-06,
+      1.5085177413314456e-06,
+      1.4209448915298425e-06
+    ],
+    "delta_by_seed": [
+      -3.008129116453104e-06,
+      -2.889729589880468e-06,
+      -3.0407271177733516e-06
+    ]
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "activation": "swiglu",
+    "activation_label": "SwiGLU",
+    "n_seeds": 3,
+    "seeds": "0;1;2",
+    "baseline_mean_mse": 1.7291652720587465e-06,
+    "baseline_sd_mse": 9.51364173856602e-08,
+    "ganar_mean_mse": 1.7003805250338157e-06,
+    "ganar_sd_mse": 9.953773882942253e-08,
+    "relative_improvement": 0.01676599779465984,
+    "all_seeds_win": true,
+    "baseline_params": 466705,
+    "ganar_trainable_params": 406010,
+    "ganar_total_params": 2195937,
+    "protocol": "ba5190a4490ba542db31e67bec5553cc181209bbe4e4e577d780b554632706e1",
+    "baseline_mse_by_seed": [
+      1.8370355335982168e-06,
+      1.6932285556506506e-06,
+      1.6572317269273722e-06
+    ],
+    "ganar_mse_by_seed": [
+      1.810944875909874e-06,
+      1.672290346355701e-06,
+      1.6179063528358718e-06
+    ],
+    "delta_by_seed": [
+      -2.6090657688342746e-08,
+      -2.093820929494946e-08,
+      -3.932537409150044e-08
+    ]
+  }
+]

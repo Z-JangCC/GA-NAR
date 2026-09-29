@@ -1,0 +1,3 @@
+system,comparator,n_pairs,n_levels,low_interaction,high_interaction,advantage_low_pct,advantage_high_pct,advantage_slope_pct_per_unit,advantage_spearman_rho,advantage_spearman_pvalue,status
+controlled,gelu,3,3,0.0,1.0,39.78492339729665,27.08665094109667,-12.698272456199975,-1.0,0.0,ok
+controlled,silu,3,3,0.0,1.0,55.44820519315683,47.265069068663685,-8.183136124493137,-1.0,0.0,ok

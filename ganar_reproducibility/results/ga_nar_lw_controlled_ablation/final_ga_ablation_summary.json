@@ -1,0 +1,1325 @@
+[
+  {
+    "system": "ieee118_acpf",
+    "activation": "relu",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_relu",
+        "n": 3,
+        "mse_by_seed": [
+          2.666957725957129e-06,
+          2.348772443105461e-06,
+          2.746146784223724e-06
+        ],
+        "mean": 2.5872923177621045e-06,
+        "sd": 2.1032480759994358e-07,
+        "residual_norm_mean_by_seed": [
+          0.008005181743270967,
+          0.007492883985029864,
+          0.008594192450759632
+        ],
+        "residual_norm_mean_mean": 0.008030752726353488,
+        "residual_norm_mean_sd": 0.0005510993472631488,
+        "residual_norm_p95_by_seed": [
+          0.011887844980481605,
+          0.010939350242829876,
+          0.012593853381964365
+        ],
+        "residual_norm_p95_mean": 0.011807016201758615,
+        "residual_norm_p95_sd": 0.0008302078823727565,
+        "residual_norm_max_by_seed": [
+          0.026056620799496034,
+          0.027976722790886487,
+          0.021957398050094966
+        ],
+        "residual_norm_max_mean": 0.02533024721349249,
+        "residual_norm_max_sd": 0.0030747002331298835,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.009130834844425109,
+          0.008234152008650554,
+          0.009807450642463661
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.009057479165179775,
+        "high_nonlinearity_residual_mean_sd": 0.0007892103265592168
+      },
+      "Capacity Control": {
+        "model": "capacity_relu",
+        "n": 3,
+        "mse_by_seed": [
+          2.523247679922704e-06,
+          2.2504292331622938e-06,
+          2.5850973230021038e-06
+        ],
+        "mean": 2.452924745362367e-06,
+        "sd": 1.7807208914689535e-07,
+        "residual_norm_mean_by_seed": [
+          0.007043245821679392,
+          0.006926097817826283,
+          0.007463216451734223
+        ],
+        "residual_norm_mean_mean": 0.007144186697079967,
+        "residual_norm_mean_sd": 0.00028242857852518835,
+        "residual_norm_p95_by_seed": [
+          0.01080893062089082,
+          0.010676464649768022,
+          0.011239026191618227
+        ],
+        "residual_norm_p95_mean": 0.010908140487425689,
+        "residual_norm_p95_sd": 0.0002941102179551402,
+        "residual_norm_max_by_seed": [
+          0.02420875838885132,
+          0.02146464979516569,
+          0.023005889006276592
+        ],
+        "residual_norm_max_mean": 0.0228930990634312,
+        "residual_norm_max_sd": 0.0013755268706536169,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.007937914293911068,
+          0.007954337113024412,
+          0.008628834193944064
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.008173695200293181,
+        "high_nonlinearity_residual_mean_sd": 0.00039424745389547055,
+        "relative_improvement_vs_baseline": 0.051933664965990174,
+        "paired_mse_improvement_mean": 0.05146701485937899,
+        "paired_mse_improvement_sd": 0.008645305123338304,
+        "paired_physics_improvement_mean": 0.10913504057105992,
+        "paired_physics_improvement_sd": 0.029562747690209414
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_relu",
+        "n": 3,
+        "mse_by_seed": [
+          2.6263420401990025e-06,
+          2.324221111961659e-06,
+          2.693000183435725e-06
+        ],
+        "mean": 2.5478544451987953e-06,
+        "sd": 1.9651902660049467e-07,
+        "residual_norm_mean_by_seed": [
+          0.007148728014398076,
+          0.007210032091640949,
+          0.007801401086104822
+        ],
+        "residual_norm_mean_mean": 0.007386720397381283,
+        "residual_norm_mean_sd": 0.00036042974720716686,
+        "residual_norm_p95_by_seed": [
+          0.011004783612047963,
+          0.011114512565335318,
+          0.011799606189860984
+        ],
+        "residual_norm_p95_mean": 0.011306300789081422,
+        "residual_norm_p95_sd": 0.00043072354779614464,
+        "residual_norm_max_by_seed": [
+          0.023377187028311874,
+          0.024408545653192986,
+          0.022723323296085538
+        ],
+        "residual_norm_max_mean": 0.0235030186591968,
+        "residual_norm_max_sd": 0.0008496286234126448,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.008099043416391954,
+          0.008382557856018673,
+          0.00888222773981678
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.008454609670742469,
+        "high_nonlinearity_residual_mean_sd": 0.00039653249440410913,
+        "relative_improvement_vs_baseline": 0.015242913331656819,
+        "paired_mse_improvement_mean": 0.015011736258239311,
+        "paired_mse_improvement_sd": 0.00445414323242488,
+        "paired_physics_improvement_mean": 0.07899471921134628,
+        "paired_physics_improvement_sd": 0.03647190173014367
+      },
+      "Full GA-NAR": {
+        "model": "ganar_relu",
+        "n": 3,
+        "mse_by_seed": [
+          2.435015168216953e-06,
+          2.1718762167207374e-06,
+          2.5218779686747135e-06
+        ],
+        "mean": 2.3762564512041346e-06,
+        "sd": 1.82249133637056e-07,
+        "residual_norm_mean_by_seed": [
+          0.007026889319337126,
+          0.006660192768842828,
+          0.0072817114715530325
+        ],
+        "residual_norm_mean_mean": 0.006989597853244329,
+        "residual_norm_mean_sd": 0.0003124329760719196,
+        "residual_norm_p95_by_seed": [
+          0.010906015856041125,
+          0.010280409203395702,
+          0.010759429896482988
+        ],
+        "residual_norm_p95_mean": 0.010648618318639938,
+        "residual_norm_p95_sd": 0.00032719310093063146,
+        "residual_norm_max_by_seed": [
+          0.025815823617473338,
+          0.025401733489697768,
+          0.021838543398743283
+        ],
+        "residual_norm_max_mean": 0.02435203350197146,
+        "residual_norm_max_sd": 0.0021865708387220845,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.008045894076576549,
+          0.0077151695596312814,
+          0.008399708419783224
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.00805359068533035,
+        "high_nonlinearity_residual_mean_sd": 0.00034233432650592046,
+        "relative_improvement_vs_baseline": 0.08156630200197353,
+        "paired_mse_improvement_mean": 0.08131667456751197,
+        "paired_mse_improvement_sd": 0.005835197713149753,
+        "paired_physics_improvement_mean": 0.1286851768481964,
+        "paired_physics_improvement_sd": 0.021536607855108962
+      },
+      "ordering_by_mean": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ]
+    }
+  },
+  {
+    "system": "ieee118_acpf",
+    "activation": "gelu",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          4.000618765376737e-06,
+          3.913865054705018e-06,
+          4.056136345819682e-06
+        ],
+        "mean": 3.990206721967145e-06,
+        "sd": 7.170486772061426e-08,
+        "residual_norm_mean_by_seed": [
+          0.0104718459364918,
+          0.010717405856108407,
+          0.010655582571312685
+        ],
+        "residual_norm_mean_mean": 0.010614944787970962,
+        "residual_norm_mean_sd": 0.00012772427571423227,
+        "residual_norm_p95_by_seed": [
+          0.015539174529947387,
+          0.01570627507868453,
+          0.015779513800027983
+        ],
+        "residual_norm_p95_mean": 0.015674987802886634,
+        "residual_norm_p95_sd": 0.00012318649035449717,
+        "residual_norm_max_by_seed": [
+          0.03243424542181802,
+          0.02452530005083147,
+          0.02545940597390583
+        ],
+        "residual_norm_max_mean": 0.027472983815518437,
+        "residual_norm_max_sd": 0.00432188917181912,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.011962774306889258,
+          0.012236229978744564,
+          0.012162854500681507
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.012120619595438442,
+        "high_nonlinearity_residual_mean_sd": 0.00014153565463559777
+      },
+      "Capacity Control": {
+        "model": "capacity_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          3.4962652448113e-06,
+          3.4228205703533414e-06,
+          3.570073103114271e-06
+        ],
+        "mean": 3.496386306092971e-06,
+        "sd": 7.362634102685394e-08,
+        "residual_norm_mean_by_seed": [
+          0.009254365331892432,
+          0.009079902315081143,
+          0.009288081750562486
+        ],
+        "residual_norm_mean_mean": 0.009207449799178686,
+        "residual_norm_mean_sd": 0.00011173839871187327,
+        "residual_norm_p95_by_seed": [
+          0.01432249631677329,
+          0.01387864731698178,
+          0.014311282689323801
+        ],
+        "residual_norm_p95_mean": 0.014170808774359625,
+        "residual_norm_p95_sd": 0.00025308135894016996,
+        "residual_norm_max_by_seed": [
+          0.030911848235407723,
+          0.022195816914464223,
+          0.025792823554999376
+        ],
+        "residual_norm_max_mean": 0.026300162901623774,
+        "residual_norm_max_sd": 0.0043801079217745285,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.01050641650047184,
+          0.010350638170902045,
+          0.010395376111504926
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.010417476927626271,
+        "high_nonlinearity_residual_mean_sd": 8.020633731701666e-05,
+        "relative_improvement_vs_baseline": 0.12375810334726822,
+        "paired_mse_improvement_mean": 0.12378857722469293,
+        "paired_mse_improvement_sd": 0.0034381026810256132,
+        "paired_physics_improvement_mean": 0.13246266760095018,
+        "paired_physics_improvement_sd": 0.01860973194303546
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          3.6417464461830463e-06,
+          3.5827306280377075e-06,
+          3.7510321067761604e-06
+        ],
+        "mean": 3.6585030603323053e-06,
+        "sd": 8.53928277122723e-08,
+        "residual_norm_mean_by_seed": [
+          0.009347147878461196,
+          0.00929092849050478,
+          0.009584936535671095
+        ],
+        "residual_norm_mean_mean": 0.009407670968212357,
+        "residual_norm_mean_sd": 0.00015606878595798648,
+        "residual_norm_p95_by_seed": [
+          0.014303129428768768,
+          0.014213757502501234,
+          0.014766260435547572
+        ],
+        "residual_norm_p95_mean": 0.014427715788939192,
+        "residual_norm_p95_sd": 0.0002965740946400871,
+        "residual_norm_max_by_seed": [
+          0.03219554628703774,
+          0.022571404089310118,
+          0.02377255497965473
+        ],
+        "residual_norm_max_mean": 0.02617983511866753,
+        "residual_norm_max_sd": 0.005244261293193206,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.010660556084797568,
+          0.010674087576278954,
+          0.01085820975379626
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.010730951138290928,
+        "high_nonlinearity_residual_mean_sd": 0.00011041667324583877,
+        "relative_improvement_vs_baseline": 0.08312944284533516,
+        "paired_mse_improvement_mean": 0.08317669736519073,
+        "paired_mse_improvement_sd": 0.007346844855292907,
+        "paired_physics_improvement_mean": 0.11365956160747097,
+        "paired_physics_improvement_sd": 0.017187497738011325
+      },
+      "Full GA-NAR": {
+        "model": "ganar_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          3.537529661845827e-06,
+          3.4548445979830574e-06,
+          3.594399386776857e-06
+        ],
+        "mean": 3.528924548868581e-06,
+        "sd": 7.017421710168125e-08,
+        "residual_norm_mean_by_seed": [
+          0.009173998317846944,
+          0.00930974865035014,
+          0.009487623335674598
+        ],
+        "residual_norm_mean_mean": 0.00932379010129056,
+        "residual_norm_mean_sd": 0.00015728329444106024,
+        "residual_norm_p95_by_seed": [
+          0.014234660001154429,
+          0.014317956294467754,
+          0.014445575323743201
+        ],
+        "residual_norm_p95_mean": 0.01433273053978846,
+        "residual_norm_p95_sd": 0.00010623100804039666,
+        "residual_norm_max_by_seed": [
+          0.03244787139890242,
+          0.024191202230805956,
+          0.02422525205235818
+        ],
+        "residual_norm_max_mean": 0.02695477522735552,
+        "residual_norm_max_sd": 0.004757191294239108,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.010534200506621436,
+          0.010753728194166286,
+          0.010902186758784285
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.010730038486524004,
+        "high_nonlinearity_residual_mean_sd": 0.00018513339010385878,
+        "relative_improvement_vs_baseline": 0.11560357776931299,
+        "paired_mse_improvement_mean": 0.11562387329496365,
+        "paired_mse_improvement_sd": 0.001725683211510727,
+        "paired_physics_improvement_mean": 0.1216300067071831,
+        "paired_physics_improvement_sd": 0.011048624740320536
+      },
+      "ordering_by_mean": [
+        "Capacity Control",
+        "Full GA-NAR",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Capacity Control",
+        "Full GA-NAR",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ]
+    }
+  },
+  {
+    "system": "ieee118_acpf",
+    "activation": "swiglu",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_swiglu",
+        "n": 3,
+        "mse_by_seed": [
+          1.8277167739403538e-06,
+          1.7401066494743687e-06,
+          1.9070137479802453e-06
+        ],
+        "mean": 1.8249457237983227e-06,
+        "sd": 8.34880465820098e-08,
+        "residual_norm_mean_by_seed": [
+          0.008455015142090605,
+          0.008569145031496094,
+          0.008613330369559911
+        ],
+        "residual_norm_mean_mean": 0.00854583018104887,
+        "residual_norm_mean_sd": 8.1692193633767e-05,
+        "residual_norm_p95_by_seed": [
+          0.011872096001608792,
+          0.012304173799008111,
+          0.011977467982542898
+        ],
+        "residual_norm_p95_mean": 0.012051245927719932,
+        "residual_norm_p95_sd": 0.000225289135661867,
+        "residual_norm_max_by_seed": [
+          0.017650975209965964,
+          0.020577768484297005,
+          0.016938521876039465
+        ],
+        "residual_norm_max_mean": 0.018389088523434145,
+        "residual_norm_max_sd": 0.0019286361545319364,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.009323973305261008,
+          0.009669051387571091,
+          0.009581722412054322
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.009524915701628807,
+        "high_nonlinearity_residual_mean_sd": 0.0001794156416947176
+      },
+      "Capacity Control": {
+        "model": "capacity_swiglu",
+        "n": 3,
+        "mse_by_seed": [
+          1.5035579416622892e-06,
+          1.4116431830285044e-06,
+          1.5014904277265868e-06
+        ],
+        "mean": 1.47223051747246e-06,
+        "sd": 5.24803532261016e-08,
+        "residual_norm_mean_by_seed": [
+          0.00593385924950391,
+          0.006522379481784798,
+          0.006369178843914973
+        ],
+        "residual_norm_mean_mean": 0.00627513919173456,
+        "residual_norm_mean_sd": 0.0003053221382206787,
+        "residual_norm_p95_by_seed": [
+          0.008866679056212398,
+          0.010008148024827086,
+          0.009480644339304362
+        ],
+        "residual_norm_p95_mean": 0.009451823806781282,
+        "residual_norm_p95_sd": 0.0005712799829319731,
+        "residual_norm_max_by_seed": [
+          0.014900576819687776,
+          0.021228628989409935,
+          0.013809117525396677
+        ],
+        "residual_norm_max_mean": 0.016646107778164793,
+        "residual_norm_max_sd": 0.004005926401771171,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.006522976208508798,
+          0.007228635592999065,
+          0.007087122627355457
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.006946244809621107,
+        "high_nonlinearity_residual_mean_sd": 0.000373327887221127,
+        "relative_improvement_vs_baseline": 0.19327435425955805,
+        "paired_mse_improvement_mean": 0.19292204675474722,
+        "paired_mse_improvement_sd": 0.01800982736527858,
+        "paired_physics_improvement_mean": 0.2658605380709899,
+        "paired_physics_improvement_sd": 0.030021034230277462
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_swiglu",
+        "n": 3,
+        "mse_by_seed": [
+          1.5807063000873013e-06,
+          1.5064518417051037e-06,
+          1.5681499561991017e-06
+        ],
+        "mean": 1.5517693659971687e-06,
+        "sd": 3.9745112264668744e-08,
+        "residual_norm_mean_by_seed": [
+          0.00610823662513328,
+          0.006987389383987039,
+          0.006630016640484356
+        ],
+        "residual_norm_mean_mean": 0.006575214216534891,
+        "residual_norm_mean_sd": 0.00044213105817517145,
+        "residual_norm_p95_by_seed": [
+          0.00902335959335431,
+          0.011077996523718235,
+          0.009862385582861302
+        ],
+        "residual_norm_p95_mean": 0.009987913899977949,
+        "residual_norm_p95_sd": 0.001033054329501806,
+        "residual_norm_max_by_seed": [
+          0.015929122804677228,
+          0.01827491625356235,
+          0.01477167277691975
+        ],
+        "residual_norm_max_mean": 0.016325237278386442,
+        "residual_norm_max_sd": 0.0017848973979955204,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.00668728056201491,
+          0.007786480439365112,
+          0.007414414187343061
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.007296058396241027,
+        "high_nonlinearity_residual_mean_sd": 0.0005590761688332065,
+        "relative_improvement_vs_baseline": 0.14969012734942194,
+        "paired_mse_improvement_mean": 0.1490388598851109,
+        "paired_mse_improvement_sd": 0.0248193956154057,
+        "paired_physics_improvement_mean": 0.23080294344271501,
+        "paired_physics_improvement_sd": 0.04648896881173936
+      },
+      "Full GA-NAR": {
+        "model": "ganar_swiglu",
+        "n": 3,
+        "mse_by_seed": [
+          1.4745676773197136e-06,
+          1.3801221410736265e-06,
+          1.4741310317365578e-06
+        ],
+        "mean": 1.4429402833766325e-06,
+        "sd": 5.44025451301855e-08,
+        "residual_norm_mean_by_seed": [
+          0.00606809387324388,
+          0.006476047341525037,
+          0.0062696001568324465
+        ],
+        "residual_norm_mean_mean": 0.006271247123867121,
+        "residual_norm_mean_sd": 0.00020398172086235128,
+        "residual_norm_p95_by_seed": [
+          0.008937052679498753,
+          0.009863627284680623,
+          0.009405220834417385
+        ],
+        "residual_norm_p95_mean": 0.009401966932865586,
+        "residual_norm_p95_sd": 0.00046329587268662974,
+        "residual_norm_max_by_seed": [
+          0.01642433772135446,
+          0.015105488083125207,
+          0.013282717835734729
+        ],
+        "residual_norm_max_mean": 0.014937514546738133,
+        "residual_norm_max_sd": 0.0015775313651795063,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.006635051480650656,
+          0.007227499151979366,
+          0.007152099839379371
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.007004883490669797,
+        "high_nonlinearity_residual_mean_sd": 0.0003224950399792791,
+        "relative_improvement_vs_baseline": 0.2093242749305492,
+        "paired_mse_improvement_mean": 0.20902958585665096,
+        "paired_mse_improvement_sd": 0.016990944668117576,
+        "paired_physics_improvement_mean": 0.2662243788446561,
+        "paired_physics_improvement_sd": 0.019694134855006862
+      },
+      "ordering_by_mean": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ]
+    }
+  },
+  {
+    "system": "kuramoto64",
+    "activation": "relu",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_relu",
+        "n": 3,
+        "mse_by_seed": [
+          0.018466439410335465,
+          0.018611981284864125,
+          0.01895398109586543
+        ],
+        "mean": 0.01867746726368834,
+        "sd": 0.00025028090987782827,
+        "residual_norm_mean_by_seed": [
+          0.03712321495831242,
+          0.03886619510662956,
+          0.04154007349493851
+        ],
+        "residual_norm_mean_mean": 0.039176494519960164,
+        "residual_norm_mean_sd": 0.002224718887315134,
+        "residual_norm_p95_by_seed": [
+          0.04910680774716963,
+          0.047795794593031515,
+          0.052788204717462935
+        ],
+        "residual_norm_p95_mean": 0.04989693568588802,
+        "residual_norm_p95_sd": 0.00258829409694665,
+        "residual_norm_max_by_seed": [
+          0.07770003218904542,
+          0.07011612511933812,
+          0.06940841803438683
+        ],
+        "residual_norm_max_mean": 0.07240819178092346,
+        "residual_norm_max_sd": 0.004596508839140516,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.04036627709329406,
+          0.04071725376432532,
+          0.043736980857916
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.041606837238511794,
+        "high_nonlinearity_residual_mean_sd": 0.0018530866238167013
+      },
+      "Capacity Control": {
+        "model": "capacity_relu",
+        "n": 3,
+        "mse_by_seed": [
+          0.0010549516327099987,
+          0.0008706537216302628,
+          0.0010811893109770267
+        ],
+        "mean": 0.001002264888439096,
+        "sd": 0.00011473111331194305,
+        "residual_norm_mean_by_seed": [
+          0.027641144188513468,
+          0.024210935716569373,
+          0.027322192563576375
+        ],
+        "residual_norm_mean_mean": 0.02639142415621974,
+        "residual_norm_mean_sd": 0.0018950804498356181,
+        "residual_norm_p95_by_seed": [
+          0.041413327337278996,
+          0.036113231548652876,
+          0.038934246096274855
+        ],
+        "residual_norm_p95_mean": 0.03882026832740224,
+        "residual_norm_p95_sd": 0.002651885563330546,
+        "residual_norm_max_by_seed": [
+          0.06665179830947812,
+          0.05542185081950506,
+          0.05689679069170663
+        ],
+        "residual_norm_max_mean": 0.05965681327356328,
+        "residual_norm_max_sd": 0.0061025587785909115,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.03140159090432715,
+          0.027710471988563946,
+          0.030968795168230586
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.03002695268704056,
+        "high_nonlinearity_residual_mean_sd": 0.0020177686084154613,
+        "relative_improvement_vs_baseline": 0.9463382869695807,
+        "paired_mse_improvement_mean": 0.9463499614412766,
+        "paired_mse_improvement_sd": 0.005950467284389398,
+        "paired_physics_improvement_mean": 0.324920066369829,
+        "paired_physics_improvement_sd": 0.06265219393006344
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_relu",
+        "n": 3,
+        "mse_by_seed": [
+          0.0010023661556137363,
+          0.0008435035038312947,
+          0.0010144286201915582
+        ],
+        "mean": 0.0009534327598788631,
+        "sd": 9.539238315663198e-05,
+        "residual_norm_mean_by_seed": [
+          0.026364769716501167,
+          0.023352824416718675,
+          0.025885642685651425
+        ],
+        "residual_norm_mean_mean": 0.025201078939623756,
+        "residual_norm_mean_sd": 0.0016184635504088558,
+        "residual_norm_p95_by_seed": [
+          0.03987787620681688,
+          0.035435571663439976,
+          0.03795992739106599
+        ],
+        "residual_norm_p95_mean": 0.037757791753774285,
+        "residual_norm_p95_sd": 0.002228039839393423,
+        "residual_norm_max_by_seed": [
+          0.06303375052717687,
+          0.05319841821099088,
+          0.06069428579394034
+        ],
+        "residual_norm_max_mean": 0.05897548484403603,
+        "residual_norm_max_sd": 0.005138010117885822,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.030189912888087228,
+          0.027037034105492283,
+          0.029724586886160927
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.028983844626580147,
+        "high_nonlinearity_residual_mean_sd": 0.0017019651805430616,
+        "relative_improvement_vs_baseline": 0.9489527811015109,
+        "paired_mse_improvement_mean": 0.9489595031589184,
+        "paired_mse_improvement_sd": 0.004968246002391402,
+        "paired_physics_improvement_mean": 0.3552677262639392,
+        "paired_physics_improvement_sd": 0.05777924480320763
+      },
+      "Full GA-NAR": {
+        "model": "ganar_relu",
+        "n": 3,
+        "mse_by_seed": [
+          0.0010730647986699655,
+          0.0009185783752395628,
+          0.0011724819293313063
+        ],
+        "mean": 0.0010547083677469448,
+        "sd": 0.0001279432398068708,
+        "residual_norm_mean_by_seed": [
+          0.028192004635280293,
+          0.025028713180910715,
+          0.02863977080923801
+        ],
+        "residual_norm_mean_mean": 0.02728682954180967,
+        "residual_norm_mean_sd": 0.0019683599165688285,
+        "residual_norm_p95_by_seed": [
+          0.04178805041141262,
+          0.03668645976894289,
+          0.03958635992732831
+        ],
+        "residual_norm_p95_mean": 0.03935362336922794,
+        "residual_norm_p95_sd": 0.0025587460796141874,
+        "residual_norm_max_by_seed": [
+          0.06808508414747602,
+          0.05720357884301824,
+          0.05807359590637532
+        ],
+        "residual_norm_max_mean": 0.06112075296562319,
+        "residual_norm_max_sd": 0.006046954938688467,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.03198338551675049,
+          0.02847768318538457,
+          0.0321034937523645
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.030854854151499855,
+        "high_nonlinearity_residual_mean_sd": 0.0020595661797261303,
+        "relative_improvement_vs_baseline": 0.9435304394939324,
+        "paired_mse_improvement_mean": 0.943559179575911,
+        "paired_mse_improvement_sd": 0.006417342684585804,
+        "paired_physics_improvement_mean": 0.30238746884811185,
+        "paired_physics_improvement_sd": 0.058154235947955026
+      },
+      "ordering_by_mean": [
+        "Generic Geometry Control",
+        "Capacity Control",
+        "Full GA-NAR",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Generic Geometry Control",
+        "Capacity Control",
+        "Full GA-NAR",
+        "Original Baseline"
+      ]
+    }
+  },
+  {
+    "system": "kuramoto64",
+    "activation": "gelu",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          0.0003640843453139157,
+          0.0003278749950886983,
+          0.00028295141016451925
+        ],
+        "mean": 0.0003249702501890444,
+        "sd": 4.064439012567529e-05,
+        "residual_norm_mean_by_seed": [
+          0.011957466824358314,
+          0.012114051024927915,
+          0.011990572558557549
+        ],
+        "residual_norm_mean_mean": 0.012020696802614592,
+        "residual_norm_mean_sd": 8.252427235069364e-05,
+        "residual_norm_p95_by_seed": [
+          0.015486123173168557,
+          0.015660559418605464,
+          0.01587950266650517
+        ],
+        "residual_norm_p95_mean": 0.01567539508609306,
+        "residual_norm_p95_sd": 0.00019710892728842786,
+        "residual_norm_max_by_seed": [
+          0.023489737369830694,
+          0.02406466004205737,
+          0.02377910412306392
+        ],
+        "residual_norm_max_mean": 0.023777833844983994,
+        "residual_norm_max_sd": 0.0002874634410927164,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.0132236711937409,
+          0.01335835185652732,
+          0.013069248247681568
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.01321709043264993,
+        "high_nonlinearity_residual_mean_sd": 0.00014466410741545999
+      },
+      "Capacity Control": {
+        "model": "capacity_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          0.00036093104032915336,
+          0.00032174081927608154,
+          0.00028115970308808586
+        ],
+        "mean": 0.0003212771875644403,
+        "sd": 3.988768954301641e-05,
+        "residual_norm_mean_by_seed": [
+          0.011939717331354049,
+          0.012045084396057247,
+          0.01194705278314968
+        ],
+        "residual_norm_mean_mean": 0.01197728483685366,
+        "residual_norm_mean_sd": 5.8830582050598146e-05,
+        "residual_norm_p95_by_seed": [
+          0.015456865165835998,
+          0.015556334403413594,
+          0.015851504347608635
+        ],
+        "residual_norm_p95_mean": 0.015621567972286074,
+        "residual_norm_p95_sd": 0.00020524761832582805,
+        "residual_norm_max_by_seed": [
+          0.02396808142169024,
+          0.02379404690150601,
+          0.023565931003541294
+        ],
+        "residual_norm_max_mean": 0.02377601977557918,
+        "residual_norm_max_sd": 0.0002016803725111332,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.013216658177570346,
+          0.013306926935413532,
+          0.013033098494441219
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.013185561202475033,
+        "high_nonlinearity_residual_mean_sd": 0.00013953770159491228,
+        "relative_improvement_vs_baseline": 0.011364309878998908,
+        "paired_mse_improvement_mean": 0.011234004077573257,
+        "paired_mse_improvement_sd": 0.006577318274785473,
+        "paired_physics_improvement_mean": 0.0036023317985373654,
+        "paired_physics_improvement_sd": 0.0021044938203951405
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          0.00036122828934636686,
+          0.00032170332717674745,
+          0.0002810739895550316
+        ],
+        "mean": 0.0003213352020260487,
+        "sd": 4.007841789360882e-05,
+        "residual_norm_mean_by_seed": [
+          0.011943890833737094,
+          0.012043591170697561,
+          0.011954061872176484
+        ],
+        "residual_norm_mean_mean": 0.011980514625537045,
+        "residual_norm_mean_sd": 5.4862103657932706e-05,
+        "residual_norm_p95_by_seed": [
+          0.015547881882387716,
+          0.015593310424551532,
+          0.015763396929883232
+        ],
+        "residual_norm_p95_mean": 0.01563486307894083,
+        "residual_norm_p95_sd": 0.00011360744359127936,
+        "residual_norm_max_by_seed": [
+          0.023989849211436157,
+          0.023811045815184947,
+          0.023500839102425643
+        ],
+        "residual_norm_max_mean": 0.02376724470968225,
+        "residual_norm_max_sd": 0.0002474300392253586,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.013235582521441186,
+          0.013315555957140858,
+          0.013030474353627695
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.013193870944069914,
+        "high_nonlinearity_residual_mean_sd": 0.0001470468358398398,
+        "relative_improvement_vs_baseline": 0.011185787501720864,
+        "paired_mse_improvement_mean": 0.011100952893891776,
+        "paired_mse_improvement_sd": 0.006714972812918711,
+        "paired_physics_improvement_mean": 0.00333222678332947,
+        "paired_physics_improvement_sd": 0.002353694417441758
+      },
+      "Full GA-NAR": {
+        "model": "ganar_gelu",
+        "n": 3,
+        "mse_by_seed": [
+          0.0003586564045508736,
+          0.00031978340500114663,
+          0.00027864095194045195
+        ],
+        "mean": 0.0003190269204974907,
+        "sd": 4.001308992962005e-05,
+        "residual_norm_mean_by_seed": [
+          0.011910759749680842,
+          0.01202318154494587,
+          0.011916180220102882
+        ],
+        "residual_norm_mean_mean": 0.011950040504909864,
+        "residual_norm_mean_sd": 6.339995408563398e-05,
+        "residual_norm_p95_by_seed": [
+          0.015442451708662219,
+          0.015584943679085111,
+          0.015695821787542665
+        ],
+        "residual_norm_p95_mean": 0.015574405725096665,
+        "residual_norm_p95_sd": 0.00012701332833080114,
+        "residual_norm_max_by_seed": [
+          0.02388140939472614,
+          0.02384669010237853,
+          0.02354327086357303
+        ],
+        "residual_norm_max_mean": 0.023757123453559237,
+        "residual_norm_max_sd": 0.00018601358820832125,
+        "high_nonlinearity_residual_mean_by_seed": [
+          0.013194498657851288,
+          0.01329281221241924,
+          0.012988562339338277
+        ],
+        "high_nonlinearity_residual_mean_mean": 0.013158624403202935,
+        "high_nonlinearity_residual_mean_sd": 0.00015526499260096167,
+        "relative_improvement_vs_baseline": 0.018288842403562433,
+        "paired_mse_improvement_mean": 0.018273758253959455,
+        "paired_mse_improvement_sd": 0.005549390813520743,
+        "paired_physics_improvement_mean": 0.005870500184964156,
+        "paired_physics_improvement_sd": 0.0018206189322786746
+      },
+      "ordering_by_mean": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ]
+    }
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "activation": "relu",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_relu",
+        "n": 3,
+        "mse_by_seed": [
+          2.474619844839915e-06,
+          2.3489199366025034e-06,
+          2.356547227732383e-06
+        ],
+        "mean": 2.3933623363916003e-06,
+        "sd": 7.04743279635635e-08,
+        "residual_norm_mean_by_seed": [
+          4.141600436266458e-05,
+          3.9336546093589156e-05,
+          3.9582661663636805e-05
+        ],
+        "residual_norm_mean_mean": 4.0111737373296844e-05,
+        "residual_norm_mean_sd": 1.1362119094256782e-06,
+        "residual_norm_p95_by_seed": [
+          6.320922536074258e-05,
+          6.388753166414274e-05,
+          5.968780725173794e-05
+        ],
+        "residual_norm_p95_mean": 6.226152142554108e-05,
+        "residual_norm_p95_sd": 2.2545572396003862e-06,
+        "residual_norm_max_by_seed": [
+          0.00020254940977953265,
+          0.00023198619595815573,
+          0.00014814403988752396
+        ],
+        "residual_norm_max_mean": 0.00019422654854173746,
+        "residual_norm_max_sd": 4.2536211608825014e-05,
+        "high_nonlinearity_residual_mean_by_seed": [
+          5.2624838379527805e-05,
+          5.1235762288986884e-05,
+          4.995888852613576e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 5.1273163064883484e-05,
+        "high_nonlinearity_residual_mean_sd": 1.3333683919789435e-06
+      },
+      "Capacity Control": {
+        "model": "capacity_relu",
+        "n": 3,
+        "mse_by_seed": [
+          1.4058393831691135e-06,
+          1.215360738371344e-06,
+          1.2439700194919267e-06
+        ],
+        "mean": 1.2883900470107948e-06,
+        "sd": 1.0271505568601641e-07,
+        "residual_norm_mean_by_seed": [
+          3.471467055162973e-05,
+          3.23732218215688e-05,
+          3.290304214220395e-05
+        ],
+        "residual_norm_mean_mean": 3.333031150513416e-05,
+        "residual_norm_mean_sd": 1.2278089713998988e-06,
+        "residual_norm_p95_by_seed": [
+          5.564165265264635e-05,
+          5.583223038927221e-05,
+          5.256352872690657e-05
+        ],
+        "residual_norm_p95_mean": 5.467913725627505e-05,
+        "residual_norm_p95_sd": 1.8346469839118477e-06,
+        "residual_norm_max_by_seed": [
+          0.00019762259835730752,
+          0.00022643079627444535,
+          0.00015146448065063257
+        ],
+        "residual_norm_max_mean": 0.00019183929176079515,
+        "residual_norm_max_sd": 3.781629405354558e-05,
+        "high_nonlinearity_residual_mean_by_seed": [
+          4.3321923229829264e-05,
+          4.211440968568928e-05,
+          4.120016804120176e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 4.221216698557343e-05,
+        "high_nonlinearity_residual_mean_sd": 1.0642502700856659e-06,
+        "relative_improvement_vs_baseline": 0.46168199130547805,
+        "paired_mse_improvement_mean": 0.4622019984126043,
+        "paired_mse_improvement_sd": 0.026761633501736187,
+        "paired_physics_improvement_mean": 0.16919192364932487,
+        "paired_physics_improvement_sd": 0.007616468228877674
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_relu",
+        "n": 3,
+        "mse_by_seed": [
+          1.408104163586389e-06,
+          1.2175124205498622e-06,
+          1.2473672778253198e-06
+        ],
+        "mean": 1.290994620653857e-06,
+        "sd": 1.0251249636085542e-07,
+        "residual_norm_mean_by_seed": [
+          3.476846402490498e-05,
+          3.2395588251554005e-05,
+          3.2949695246810446e-05
+        ],
+        "residual_norm_mean_mean": 3.337124917442314e-05,
+        "residual_norm_mean_sd": 1.241336233400629e-06,
+        "residual_norm_p95_by_seed": [
+          5.582381517170956e-05,
+          5.5956070311293094e-05,
+          5.314130172032021e-05
+        ],
+        "residual_norm_p95_mean": 5.497372906777429e-05,
+        "residual_norm_p95_sd": 1.588305809112262e-06,
+        "residual_norm_max_by_seed": [
+          0.00019819588792002488,
+          0.0002267231362264925,
+          0.00015180179851371947
+        ],
+        "residual_norm_max_mean": 0.00019224027422007895,
+        "residual_norm_max_sd": 3.781406764783557e-05,
+        "high_nonlinearity_residual_mean_by_seed": [
+          4.34241535931462e-05,
+          4.214960948944531e-05,
+          4.130086709690868e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 4.2291543393166725e-05,
+        "high_nonlinearity_residual_mean_sd": 1.0687353793364158e-06,
+        "relative_improvement_vs_baseline": 0.4605937425253167,
+        "paired_mse_improvement_mean": 0.46111104534187985,
+        "paired_mse_improvement_sd": 0.02666530364497653,
+        "paired_physics_improvement_mean": 0.16817656581520313,
+        "paired_physics_improvement_sd": 0.007989174128766319
+      },
+      "Full GA-NAR": {
+        "model": "ganar_relu",
+        "n": 3,
+        "mse_by_seed": [
+          1.4015106123639267e-06,
+          1.207935653505915e-06,
+          1.2387317543695784e-06
+        ],
+        "mean": 1.2827260067464733e-06,
+        "sd": 1.040165220331447e-07,
+        "residual_norm_mean_by_seed": [
+          3.457611858598352e-05,
+          3.2213342957998126e-05,
+          3.282896965098449e-05
+        ],
+        "residual_norm_mean_mean": 3.320614373165538e-05,
+        "residual_norm_mean_sd": 1.2257130098020034e-06,
+        "residual_norm_p95_by_seed": [
+          5.508716304073161e-05,
+          5.572511868840094e-05,
+          5.125883232612663e-05
+        ],
+        "residual_norm_p95_mean": 5.4023704685086394e-05,
+        "residual_norm_p95_sd": 2.4156026625053813e-06,
+        "residual_norm_max_by_seed": [
+          0.0001982301699232534,
+          0.0002293219178752085,
+          0.00015264296840813692
+        ],
+        "residual_norm_max_mean": 0.00019339835206886626,
+        "residual_norm_max_sd": 3.8567151446236084e-05,
+        "high_nonlinearity_residual_mean_by_seed": [
+          4.352362968288073e-05,
+          4.208186281210804e-05,
+          4.12694269321749e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 4.229163980905455e-05,
+        "high_nonlinearity_residual_mean_sd": 1.1416489397614112e-06,
+        "relative_improvement_vs_baseline": 0.46404855326653116,
+        "paired_mse_improvement_mean": 0.46457972720929885,
+        "paired_mse_improvement_sd": 0.027389400373281386,
+        "paired_physics_improvement_mean": 0.1722856217399594,
+        "paired_physics_improvement_sd": 0.008095560179419647
+      },
+      "ordering_by_mean": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Full GA-NAR",
+        "Capacity Control",
+        "Generic Geometry Control",
+        "Original Baseline"
+      ]
+    }
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "activation": "softplus",
+    "methods": {
+      "Original Baseline": {
+        "model": "pm_softplus",
+        "n": 3,
+        "mse_by_seed": [
+          4.523520311817733e-06,
+          4.398247331211914e-06,
+          4.461672009303194e-06
+        ],
+        "mean": 4.4611465507776135e-06,
+        "sd": 6.263814331110934e-08,
+        "residual_norm_mean_by_seed": [
+          7.246971602592276e-05,
+          7.154696815162976e-05,
+          7.186741914589062e-05
+        ],
+        "residual_norm_mean_mean": 7.196136777448105e-05,
+        "residual_norm_mean_sd": 4.6849297592234897e-07,
+        "residual_norm_p95_by_seed": [
+          0.00010430324730948323,
+          0.00010520438630523676,
+          0.00010280085878966737
+        ],
+        "residual_norm_p95_mean": 0.00010410283080146246,
+        "residual_norm_p95_sd": 1.2142327668285945e-06,
+        "residual_norm_max_by_seed": [
+          0.00017929379481301675,
+          0.00017475254975225622,
+          0.00017291095941910994
+        ],
+        "residual_norm_max_mean": 0.00017565243466146098,
+        "residual_norm_max_sd": 3.2851927726981563e-06,
+        "high_nonlinearity_residual_mean_by_seed": [
+          8.932599608093645e-05,
+          8.79712704658303e-05,
+          8.716484843243724e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 8.815403832640132e-05,
+        "high_nonlinearity_residual_mean_sd": 1.0921047833411825e-06
+      },
+      "Capacity Control": {
+        "model": "capacity_softplus",
+        "n": 3,
+        "mse_by_seed": [
+          1.969735570812486e-06,
+          1.951100471155749e-06,
+          1.9178363480530003e-06
+        ],
+        "mean": 1.9462241300070784e-06,
+        "sd": 2.629099385737137e-08,
+        "residual_norm_mean_by_seed": [
+          4.6689328187025603e-05,
+          4.660863627014548e-05,
+          4.612978082531211e-05
+        ],
+        "residual_norm_mean_mean": 4.647591509416106e-05,
+        "residual_norm_mean_sd": 3.0246403987275703e-07,
+        "residual_norm_p95_by_seed": [
+          8.333214926966677e-05,
+          8.317822941647149e-05,
+          8.257959254787326e-05
+        ],
+        "residual_norm_p95_mean": 8.302999041133717e-05,
+        "residual_norm_p95_sd": 3.9757578756956333e-07,
+        "residual_norm_max_by_seed": [
+          0.0001777199667112263,
+          0.00015177388583855796,
+          0.00016874969407228317
+        ],
+        "residual_norm_max_mean": 0.00016608118220735584,
+        "residual_norm_max_sd": 1.3177271904408176e-05,
+        "high_nonlinearity_residual_mean_by_seed": [
+          5.512017262825164e-05,
+          5.491030766193638e-05,
+          5.4467097453938445e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 5.483252591470882e-05,
+        "high_nonlinearity_residual_mean_sd": 3.3341310108839635e-07,
+        "relative_improvement_vs_baseline": 0.5637390281052668,
+        "paired_mse_improvement_mean": 0.5637004320602945,
+        "paired_mse_improvement_sd": 0.006920677232179845,
+        "paired_physics_improvement_mean": 0.3541418991043159,
+        "paired_physics_improvement_sd": 0.004980093411788508
+      },
+      "Generic Geometry Control": {
+        "model": "generic_geometry_softplus",
+        "n": 3,
+        "mse_by_seed": [
+          1.9703233289850654e-06,
+          1.9504021575260376e-06,
+          1.916051868369475e-06
+        ],
+        "mean": 1.9455924516268593e-06,
+        "sd": 2.7453557373587078e-08,
+        "residual_norm_mean_by_seed": [
+          4.67117654143554e-05,
+          4.660267662477595e-05,
+          4.608613468409902e-05
+        ],
+        "residual_norm_mean_mean": 4.646685890774346e-05,
+        "residual_norm_mean_sd": 3.341979830208733e-07,
+        "residual_norm_p95_by_seed": [
+          8.263788074397329e-05,
+          8.258306459926266e-05,
+          8.22882853209474e-05
+        ],
+        "residual_norm_p95_mean": 8.250307688806112e-05,
+        "residual_norm_p95_sd": 1.8802331080907947e-07,
+        "residual_norm_max_by_seed": [
+          0.00017776512269855529,
+          0.00015158719004533517,
+          0.00016880514174494844
+        ],
+        "residual_norm_max_mean": 0.00016605248482961295,
+        "residual_norm_max_sd": 1.3304280497993502e-05,
+        "high_nonlinearity_residual_mean_by_seed": [
+          5.514448395856118e-05,
+          5.489964161655183e-05,
+          5.4381911222758984e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 5.4808678932624e-05,
+        "high_nonlinearity_residual_mean_sd": 3.893391217791082e-07,
+        "relative_improvement_vs_baseline": 0.5638806236285318,
+        "paired_mse_improvement_mean": 0.5638433636274949,
+        "paired_mse_improvement_sd": 0.00701962644086358,
+        "paired_physics_improvement_mean": 0.35426890022342034,
+        "paired_physics_improvement_sd": 0.005145198704867388
+      },
+      "Full GA-NAR": {
+        "model": "ganar_softplus",
+        "n": 3,
+        "mse_by_seed": [
+          4.386986646805455e-07,
+          5.123840641822502e-07,
+          4.3066137068441216e-07
+        ],
+        "mean": 4.6058136651573596e-07,
+        "sd": 4.5042081855097253e-08,
+        "residual_norm_mean_by_seed": [
+          2.2959439774472916e-05,
+          2.4332972567627667e-05,
+          2.2744777722089035e-05
+        ],
+        "residual_norm_mean_mean": 2.3345730021396538e-05,
+        "residual_norm_mean_sd": 8.616877816240085e-07,
+        "residual_norm_p95_by_seed": [
+          3.644697966407538e-05,
+          3.9120277451208355e-05,
+          3.674086956901266e-05
+        ],
+        "residual_norm_p95_mean": 3.74360422280988e-05,
+        "residual_norm_p95_sd": 1.4659737494676323e-06,
+        "residual_norm_max_by_seed": [
+          7.874793255132064e-05,
+          7.017844114623526e-05,
+          6.774976899881808e-05
+        ],
+        "residual_norm_max_mean": 7.222538089879132e-05,
+        "residual_norm_max_sd": 5.7777480167314895e-06,
+        "high_nonlinearity_residual_mean_by_seed": [
+          2.8910080112004405e-05,
+          3.016854721928318e-05,
+          2.8578261177290468e-05
+        ],
+        "high_nonlinearity_residual_mean_mean": 2.9218962836192683e-05,
+        "high_nonlinearity_residual_mean_sd": 8.3893314800149e-07,
+        "relative_improvement_vs_baseline": 0.8967571763730888,
+        "paired_mse_improvement_mean": 0.89666543924596,
+        "paired_mse_improvement_sd": 0.01140158153015111,
+        "paired_physics_improvement_mean": 0.6755351295572581,
+        "paired_physics_improvement_sd": 0.013539604436460505
+      },
+      "ordering_by_mean": [
+        "Full GA-NAR",
+        "Generic Geometry Control",
+        "Capacity Control",
+        "Original Baseline"
+      ],
+      "ordering_by_physics_residual": [
+        "Full GA-NAR",
+        "Generic Geometry Control",
+        "Capacity Control",
+        "Original Baseline"
+      ]
+    }
+  }
+]

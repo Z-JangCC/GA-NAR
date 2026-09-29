@@ -1,0 +1,42 @@
+{
+  "allen_cahn_2d": {
+    "allocation_mse": 1.7856635471010425e-06,
+    "capacity_mse": 3.267307041217767e-06,
+    "mode_fraction_mean_correlation": 0.9426472783088684,
+    "mode_fraction_mse": 8.226599978418866e-06,
+    "mode_fraction_normalized_mse": 0.09175899624824524,
+    "mode_fraction_r2": 0.9082409938176473
+  },
+  "coupled_duffing": {
+    "allocation_mse": 5.634339762157955e-07,
+    "capacity_mse": 3.977135065724724e-07,
+    "mode_fraction_mean_correlation": 0.997908353805542,
+    "mode_fraction_mse": 2.3261981520287614e-06,
+    "mode_fraction_normalized_mse": 0.004173361075421174,
+    "mode_fraction_r2": 0.9958266417185465
+  },
+  "ieee118_rich": {
+    "allocation_mse": 4.985321083950112e-06,
+    "capacity_mse": 3.741776102591151e-06,
+    "mode_fraction_mean_correlation": 0.9766147136688232,
+    "mode_fraction_mse": 1.709162006591214e-05,
+    "mode_fraction_normalized_mse": 0.04165227462848028,
+    "mode_fraction_r2": 0.9583477179209391
+  },
+  "shallow_water_2d": {
+    "allocation_mse": 1.2845684977946803e-06,
+    "capacity_mse": 1.1956739930004308e-06,
+    "mode_fraction_mean_correlation": 0.9455644687016805,
+    "mode_fraction_mse": 5.221142146183411e-06,
+    "mode_fraction_normalized_mse": 0.08582377682129542,
+    "mode_fraction_r2": 0.9141762256622314
+  },
+  "synthetic": {
+    "allocation_mse": 1.238952760710769e-05,
+    "capacity_mse": 3.596942527413679e-05,
+    "mode_fraction_mean_correlation": 0.8646411101023356,
+    "mode_fraction_mse": 0.0006217385331789652,
+    "mode_fraction_normalized_mse": 0.6734134952227274,
+    "mode_fraction_r2": 0.3265864849090576
+  }
+}

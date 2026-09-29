@@ -1,0 +1,4 @@
+factor,family,system,model,low_level,high_level,low_n,high_n,nrmse_low,nrmse_high,nrmse_change_pct,mean_error_decreased,q5_q1_low,q5_q1_high,high_nonlinearity_penalty_persists,evidence_tier,status
+width,scale_width,controlled,silu,128.0,1024.0,1,1,0.0184101635636323,0.0088402719738699,-51.98156744607582,True,1.1507783462395038,1.1679217716045454,True,单 seed 探索性,ok
+depth,scale_depth,controlled,silu,2.0,8.0,1,1,0.0162352362727602,0.0102411957432648,-36.919946398022674,True,1.1437218595477845,0.9913572933035472,False,单 seed 探索性,ok
+samples,scale_samples,controlled,silu,10000.0,1000000.0,1,1,0.0129661580490836,0.0082448723898813,-36.412371662676,True,1.0855156598689624,1.078788662338195,True,单 seed 探索性,ok

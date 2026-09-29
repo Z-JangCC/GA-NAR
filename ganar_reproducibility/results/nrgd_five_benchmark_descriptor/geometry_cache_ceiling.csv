@@ -1,0 +1,6 @@
+benchmark,method,allocation_mse,capacity_mse,mode_fraction_mse,mode_fraction_r2,mode_fraction_mean_correlation,status
+allen_cahn_2d,analytic_geometry_cache_ceiling,0.0,0.0,3.167090674908542e-34,1.0,1.0,CEILING
+coupled_duffing,analytic_geometry_cache_ceiling,0.0,0.0,4.902986937279761e-35,1.0,1.0,CEILING
+ieee118_rich,analytic_geometry_cache_ceiling,0.0,0.0,8.745346312783122e-34,1.0,1.0,CEILING
+shallow_water_2d,analytic_geometry_cache_ceiling,0.0,0.0,1.5210776757203074e-34,1.0,1.0,CEILING
+synthetic,analytic_geometry_cache_ceiling,0.0,0.0,2.590434414412051e-19,1.0,1.0,CEILING

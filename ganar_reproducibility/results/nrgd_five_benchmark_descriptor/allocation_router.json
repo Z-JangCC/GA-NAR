@@ -1,0 +1,117 @@
+{
+  "allen_cahn_2d": {
+    "benchmark": "allen_cahn_2d",
+    "captured_mass": 0.7693359773419108,
+    "control": {
+      "uniform_mode_fraction": "unstructured_equal_mode_capacity",
+      "uniform_mode_fraction_mse": 0.007767284151162925
+    },
+    "geometry": {
+      "conservation_max_error": 2.220446049250313e-16,
+      "conservation_pass": true,
+      "nonnegative_pass": true,
+      "valid_centers": 1536
+    },
+    "mean_strength_train": 0.0002518189788273206,
+    "population": "nominal",
+    "r90": 23,
+    "rank": 14,
+    "selected_scale": 0.02,
+    "status": "RESOLVED",
+    "system_parameter_dimension": 64,
+    "system_state_dimension": 64,
+    "valid_centers": 1536
+  },
+  "coupled_duffing": {
+    "benchmark": "coupled_duffing",
+    "captured_mass": 0.9130923145249098,
+    "control": {
+      "uniform_mode_fraction": "unstructured_equal_mode_capacity",
+      "uniform_mode_fraction_mse": 0.0005798041659528518
+    },
+    "geometry": {
+      "conservation_max_error": 3.3306690738754696e-16,
+      "conservation_pass": true,
+      "nonnegative_pass": true,
+      "valid_centers": 1024
+    },
+    "mean_strength_train": 0.08592931030224207,
+    "population": "nominal",
+    "r90": 12,
+    "rank": 12,
+    "selected_scale": 0.02,
+    "status": "RESOLVED",
+    "system_parameter_dimension": 16,
+    "system_state_dimension": 16,
+    "valid_centers": 1024
+  },
+  "ieee118_rich": {
+    "benchmark": "ieee118_rich",
+    "captured_mass": 0.9506251567548513,
+    "control": {
+      "uniform_mode_fraction": "unstructured_equal_mode_capacity",
+      "uniform_mode_fraction_mse": 0.014271498989459336
+    },
+    "geometry": {
+      "conservation_max_error": 2.220446049250313e-16,
+      "conservation_pass": true,
+      "nonnegative_pass": true,
+      "valid_centers": 1024
+    },
+    "mean_strength_train": 0.3442133254481021,
+    "population": "nominal",
+    "r90": 5,
+    "rank": 6,
+    "selected_scale": 0.02,
+    "status": "RESOLVED",
+    "system_parameter_dimension": 36,
+    "system_state_dimension": 180,
+    "valid_centers": 1024
+  },
+  "shallow_water_2d": {
+    "benchmark": "shallow_water_2d",
+    "captured_mass": 0.5676934018403362,
+    "control": {
+      "uniform_mode_fraction": "unstructured_equal_mode_capacity",
+      "uniform_mode_fraction_mse": 0.006735033796138738
+    },
+    "geometry": {
+      "conservation_max_error": 2.220446049250313e-16,
+      "conservation_pass": true,
+      "nonnegative_pass": true,
+      "valid_centers": 1280
+    },
+    "mean_strength_train": 0.010458089235913848,
+    "population": "nominal",
+    "r90": 44,
+    "rank": 16,
+    "selected_scale": 0.02,
+    "status": "RESOLVED",
+    "system_parameter_dimension": 64,
+    "system_state_dimension": 64,
+    "valid_centers": 1280
+  },
+  "synthetic": {
+    "benchmark": "synthetic",
+    "captured_mass": 0.9999999999999969,
+    "control": {
+      "uniform_mode_fraction": "unstructured_equal_mode_capacity",
+      "uniform_mode_fraction_mse": 0.01991887073759389
+    },
+    "geometry": {
+      "conservation_max_error": 2.220446049250313e-16,
+      "conservation_pass": true,
+      "nonnegative_pass": true,
+      "valid_centers": 1024
+    },
+    "mean_strength_train": 0.0017151486136305323,
+    "population": "nominal",
+    "r90": 5,
+    "rank": 5,
+    "selected_scale": 0.02,
+    "status": "RESOLVED",
+    "system_parameter_dimension": 50,
+    "system_state_dimension": 50,
+    "valid_centers": 1024
+  }
+}

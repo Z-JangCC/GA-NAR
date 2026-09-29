@@ -1,0 +1,13 @@
+{
+  "primary_source": "GA_NAR_LW_LATEST_REPRO_RELEASE.zip",
+  "supplement_source": "GANAR_non_LW_Result.zip",
+  "archive_sha256": {
+    "GA_NAR_LW_LATEST_REPRO_RELEASE.zip": "49a75e72b9612e005e192b0f22ac67d57b10774801b7a75f29a1005f5edec44c",
+    "GANAR_non_LW_Result.zip": "ac7fa1ec14afe323b1daa7963659df70f2b6c0765ae6f0f949362445262b730c"
+  },
+  "primary_protocol": "ganar-lw-independent-v1-ridge-adapter",
+  "primary_scope": "18 activation-system paired prediction rows, 3 seeds per row",
+  "supplement_scope": "non-layer-wise formal diagnostics; input-only/pre-backbone P1 table and P1 controls",
+  "generated_from": "_analysis extracted release directories",
+  "warning": "Primary layer-wise comparisons include a residual highway/ridge warm start and additional trainable parameters; they are not a pure geometry-only causal test."
+}
