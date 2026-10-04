@@ -1,0 +1,200 @@
+[
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "ganar",
+    "seed": 0,
+    "mse_std": 5.520781712893348e-07,
+    "mean_physical_residual": 0.005632154107897634,
+    "D_sub_pen": 0.11706542851683144,
+    "D_int": 0.3327401500321952,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "ganar",
+    "seed": 1,
+    "mse_std": 5.597121238284446e-07,
+    "mean_physical_residual": 0.0053961502162893195,
+    "D_sub_pen": 0.13414707538462234,
+    "D_int": 0.3384831124130495,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "ganar",
+    "seed": 2,
+    "mse_std": 5.278931236572341e-07,
+    "mean_physical_residual": 0.00488070823926342,
+    "D_sub_pen": 0.1155828701413586,
+    "D_int": 0.3237358366350521,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_swiglu",
+    "seed": 0,
+    "mse_std": 5.958788813165824e-07,
+    "mean_physical_residual": 0.0058891151206609494,
+    "D_sub_pen": 0.12140530350123413,
+    "D_int": 0.23728804266385284,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_swiglu",
+    "seed": 1,
+    "mse_std": 5.162008560653112e-07,
+    "mean_physical_residual": 0.0055573914920031145,
+    "D_sub_pen": 0.07646747507165141,
+    "D_int": 0.18434088908099044,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_swiglu",
+    "seed": 2,
+    "mse_std": 4.923463460512073e-07,
+    "mean_physical_residual": 0.00492608388873974,
+    "D_sub_pen": 0.09945311749579278,
+    "D_int": 0.22011265113482942,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "model": "ganar",
+    "seed": 0,
+    "mse_std": 0.022088437066358154,
+    "mean_physical_residual": 0.05841894826055218,
+    "D_sub_pen": 0.8927962672584077,
+    "D_int": 0.9266111242787916,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "model": "ganar",
+    "seed": 1,
+    "mse_std": 0.022998088866386567,
+    "mean_physical_residual": 0.06631543292138702,
+    "D_sub_pen": 0.7288886348756416,
+    "D_int": 0.9402779405868447,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "model": "ganar",
+    "seed": 2,
+    "mse_std": 0.02253368355988745,
+    "mean_physical_residual": 0.06361596942778056,
+    "D_sub_pen": 0.7199864717966837,
+    "D_int": 0.9473001790994255,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "model": "pm_swiglu",
+    "seed": 0,
+    "mse_std": 0.02176636579123128,
+    "mean_physical_residual": 0.06336538343810505,
+    "D_sub_pen": 0.9240323842274615,
+    "D_int": 0.9623850410859043,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "model": "pm_swiglu",
+    "seed": 1,
+    "mse_std": 0.021528595002784576,
+    "mean_physical_residual": 0.06224297973090587,
+    "D_sub_pen": 0.7905560680263797,
+    "D_int": 0.9665889434548489,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "kuramoto64",
+    "system_label": "Kuramoto-64",
+    "model": "pm_swiglu",
+    "seed": 2,
+    "mse_std": 0.021437121347072048,
+    "mean_physical_residual": 0.05866516971224869,
+    "D_sub_pen": 0.7847090433560838,
+    "D_int": 0.9896233883897465,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "model": "ganar",
+    "seed": 0,
+    "mse_std": 8.875883129619531e-07,
+    "mean_physical_residual": 2.6671621996764392e-05,
+    "D_sub_pen": 0.07369615962340426,
+    "D_int": 0.16526508922587252,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "model": "ganar",
+    "seed": 1,
+    "mse_std": 8.864299778788167e-07,
+    "mean_physical_residual": 2.727880765860339e-05,
+    "D_sub_pen": 0.27968234222839916,
+    "D_int": 0.23252548671995954,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "model": "ganar",
+    "seed": 2,
+    "mse_std": 9.395326242249072e-07,
+    "mean_physical_residual": 2.7755450212258442e-05,
+    "D_sub_pen": 0.13993434757633838,
+    "D_int": 0.208477154375546,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "model": "pm_swiglu",
+    "seed": 0,
+    "mse_std": 2.754986706696511e-06,
+    "mean_physical_residual": 4.5887025335117694e-05,
+    "D_sub_pen": 0.012354687530353181,
+    "D_int": 0.2349060919681103,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "model": "pm_swiglu",
+    "seed": 1,
+    "mse_std": 8.189411407752854e-07,
+    "mean_physical_residual": 2.557357837252207e-05,
+    "D_sub_pen": 0.00022431570151515423,
+    "D_int": 0.01919851773747646,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "nonlinear_heat_fem",
+    "system_label": "Nonlinear heat FEM",
+    "model": "pm_swiglu",
+    "seed": 2,
+    "mse_std": 8.83398598749444e-07,
+    "mean_physical_residual": 2.6192651414071223e-05,
+    "D_sub_pen": 0.0011877377908549036,
+    "D_int": 0.017043283326186907,
+    "source_protocol": "ganar-main-protocol"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "artifact": "numerical_reproduction_package",
+  "project_roles": {
+    "GANAR": "ga_nar_lw_activation_matrix and ga_nar_lw_controlled_ablation",
+    "nonlinear": "ganr_shared_physics_factorial",
+    "Implicit_System_Surrogate_Learning": "nrgd_five_benchmark_descriptor",
+    "verification": "result schemas, row counts, and provenance checks"
+  }
+}

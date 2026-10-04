@@ -1,0 +1,9 @@
+{
+  "system": "nonlinear_heat_fem",
+  "n_raw": 256,
+  "geometry_coverage": 1.0,
+  "allocation_coverage": 1.0,
+  "h": 0.02,
+  "status": "resolved",
+  "probe_hash": "0a89e22392c5b1d88e724786d38d6b940417b13cf85082806f9166f0ad24ce2b"
+}

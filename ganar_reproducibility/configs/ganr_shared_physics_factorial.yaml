@@ -1,0 +1,9 @@
+experiment: ganr_shared_physics_factorial
+description: Five-system GANR representation study with matched no-physics and shared-physics conditions
+systems: [controlled, coupled_duffing, ieee118, allen_cahn_2d, shallow_water_2d]
+models: [relu, gelu, silu, swiglu, resmlp, fourier, ganr]
+conditions: [no_physics, shared_physics]
+seeds: [11, 29, 47]
+metrics: [nrmse, q5_nrmse, response_gap, direction_alignment, physical_residual]
+data_split: fixed_train_validation_test
+selection: validation_only

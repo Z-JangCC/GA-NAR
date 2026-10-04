@@ -1,0 +1,34 @@
+protocol: ganar-lw-independent-v1
+master_seed: 20260924
+systems: [ieee118_acpf, kuramoto64, nonlinear_heat_fem]
+development_system: ieee118_acpf
+formal_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+model:
+  activation: mish
+  hidden_dim: 192
+  blocks: 4
+  ff_width: 384
+  geometry_rank: 96
+  delta_width: 384
+  dropout: 0.0
+training:
+  epochs: 400
+  patience: 50
+  batch_size: 256
+  lr_max: 0.001
+  lr_min: 0.00001
+  weight_decay: 0.00001
+  gradient_clip: 1.0
+superiority:
+  min_relative_improvement: 0.10
+  min_winning_seeds: 8
+  bootstrap_samples: 10000
+  alpha: 0.05
+candidate_loss_weights:
+  - [0.0, 0.0]
+  - [1.0, 1.0]
+  - [0.5, 0.5]
+  - [0.25, 0.25]
+  - [0.5, 0.25]
+  - [0.25, 0.5]
+  - [0.1, 0.1]

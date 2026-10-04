@@ -1,0 +1,38 @@
+study_protocol:
+  name: NRGD
+  revision: "18.0"
+  status: FIVE-BENCHMARKS-ALLOCATION-ONLY-LEAKAGE-FIXED
+  identifier: NRGD-FIVE-SYSTEMS-LEAKAGE-FIXED
+  estimator: full_jacobian_matrix
+  scales: [0.02, 0.01, 0.005, 0.0025]
+  center_budgets: {synthetic: 1024, ieee118_rich: 1024, coupled_duffing: 1024, allen_cahn_2d: 1536, shallow_water_2d: 1280}
+  directions_per_center: {synthetic: 12, ieee118_rich: 12, coupled_duffing: 16, allen_cahn_2d: 12, shallow_water_2d: 16}
+  router_seeds: [0, 1, 2]
+  target_normalization: train_partition_mean_strength_only
+  preprocessing_statistics: train_partition_only
+  router_selection: validation_mode_fraction_mse
+  fraction_loss_weight: 10.0
+  candidate_routers: [[128, 2], [256, 4]]
+  rank_cap: {synthetic: 5, ieee118_rich: 6, coupled_duffing: 12, allen_cahn_2d: 14, shallow_water_2d: 16}
+  rank_floor: {synthetic: 5, ieee118_rich: 6, coupled_duffing: 10, allen_cahn_2d: 10, shallow_water_2d: 12}
+benchmarks:
+  synthetic:
+    system: z + kappa C.T tanh(C z) - q
+    state_dimension: 50
+    parameter_dimension: 50
+  ieee118_rich:
+    system: fixed-bus-type AC power flow with rich operating controls
+    controls: [regional_load_multipliers, generator_redispatch, voltage_setpoints, shunt_controls]
+    state_dimension: 180
+    parameter_dimension: 36
+  coupled_duffing:
+    system: coupled spatial Duffing equilibrium
+    grid: 4x4
+  allen_cahn_2d:
+    system: steady 2D Allen-Cahn reaction-diffusion equilibrium
+    grid: 8x8
+    population: structured_spatial_regimes
+  shallow_water_2d:
+    system: 2D shallow-water free-surface equilibrium
+    grid: 8x8
+    population: structured_spatial_regimes

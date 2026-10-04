@@ -1,0 +1,10 @@
+system,system_label,model,seed,mse_std,mean_physical_residual,source_protocol
+ieee118_acpf,IEEE-118 AC power flow,ganar_prebackbone,0,6.705364850438082e-07,0.005637753561820324,ganar-optimized-final-v1
+ieee118_acpf,IEEE-118 AC power flow,ganar_prebackbone,1,7.063928671011277e-07,0.005908633624531173,ganar-optimized-final-v1
+ieee118_acpf,IEEE-118 AC power flow,ganar_prebackbone,2,7.38621762942078e-07,0.0060923228145243,ganar-optimized-final-v1
+ieee118_acpf,IEEE-118 AC power flow,pm_relu,0,5.169466723369047e-06,0.008665589788684733,ganar-main-protocol
+ieee118_acpf,IEEE-118 AC power flow,pm_relu,1,5.987716031668364e-06,0.008667969590636716,ganar-main-protocol
+ieee118_acpf,IEEE-118 AC power flow,pm_relu,2,6.932769926196391e-06,0.008135529885997708,ganar-main-protocol
+ieee118_acpf,IEEE-118 AC power flow,pm_swiglu,0,5.958788813165824e-07,0.0058891151206609494,ganar-main-protocol
+ieee118_acpf,IEEE-118 AC power flow,pm_swiglu,1,5.162008560653112e-07,0.0055573914920031145,ganar-main-protocol
+ieee118_acpf,IEEE-118 AC power flow,pm_swiglu,2,4.923463460512073e-07,0.00492608388873974,ganar-main-protocol

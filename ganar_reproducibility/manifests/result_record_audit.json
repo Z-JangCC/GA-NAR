@@ -1,0 +1,32 @@
+{
+  "nrgd": {
+    "rows": 5,
+    "benchmarks": [
+      "synthetic",
+      "ieee118_rich",
+      "coupled_duffing",
+      "allen_cahn_2d",
+      "shallow_water_2d"
+    ]
+  },
+  "ganr": {
+    "rows": 210,
+    "systems": 5,
+    "models": 7
+  },
+  "ga_nar_lw": {
+    "rows": 18,
+    "all_seed_wins": true
+  },
+  "controlled_ablation": {
+    "settings": 7,
+    "physics_rows": 84,
+    "methods": [
+      "Capacity Control",
+      "Full GA-NAR",
+      "Generic Geometry Control",
+      "Original Baseline"
+    ]
+  },
+  "pass": true
+}

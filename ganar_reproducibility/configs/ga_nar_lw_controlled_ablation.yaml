@@ -1,0 +1,17 @@
+experiment: ga_nar_lw_controlled_ablation
+description: Four-way controlled attribution of capacity, geometry access, and structured modulation
+systems:
+  ieee118_acpf: [relu, gelu, swiglu]
+  kuramoto64: [relu, gelu]
+  nonlinear_heat_fem: [relu, softplus]
+seeds: [0, 1, 2]
+excluded_setting: nonlinear_heat_fem/gelu
+methods: [original_baseline, capacity_control, generic_geometry_control, full_ga_nar]
+training:
+  epochs: 400
+  patience: 50
+  batch_size: 256
+  optimizer: AdamW
+  lr_max: 0.001
+  lr_min: 0.00001
+  weight_decay: 0.00001

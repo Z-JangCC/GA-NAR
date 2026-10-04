@@ -1,0 +1,18 @@
+experiment: ga_nar_lw_activation_matrix
+description: Activation-matched GA-NAR-LW paired evaluation
+systems: [ieee118_acpf, kuramoto64, nonlinear_heat_fem]
+activations: [relu, gelu, silu, mish, softplus, swiglu]
+seeds: [0, 1, 2]
+hidden_dim: 128
+branch_width: 8
+blocks: 4
+ff_width: 256
+training:
+  epochs: 400
+  patience: 50
+  batch_size: 256
+  lr_max: 0.001
+  lr_min: 0.00001
+  weight_decay: 0.00001
+  lambda_int: 0.5
+  lambda_alloc: 0.5

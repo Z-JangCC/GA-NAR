@@ -1,0 +1,17 @@
+{
+  "system": "nonlinear_heat_fem",
+  "sizes": [
+    10000,
+    1000,
+    1000
+  ],
+  "accepted_count": 12000,
+  "rejected_count": 0,
+  "protocol_hash": "42a9bf510d45be017a25f4670a68e30e75b87f635506bf148e5548d35d7b0cda",
+  "q_hash": "58be973d202d0223145aa08b53a9ab5d3b14f0000c3b88b90845a5af3ce80896",
+  "z_hash": "d06374a02e137d7c0ad22e1ff6f2b16844a239447e611fb3a57f1c598872b908",
+  "split_hash": "ecfdab41872a7a368bffdec7229d1680023a81a3bdbf56ac0d86a57d3c5fe7b9",
+  "standardization_hash": "698289a0bc166b8c2060b40766a0530402cc14a093c968de15e8098e1880c777",
+  "dtype": "float64",
+  "quick": false
+}

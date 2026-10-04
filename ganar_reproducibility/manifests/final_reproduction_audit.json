@@ -1,0 +1,36 @@
+{
+  "table2": {
+    "rows": 70,
+    "seed_rows": 210,
+    "passed": true
+  },
+  "layerwise": {
+    "rows": 18,
+    "all_seed_wins": true
+  },
+  "controlled_ablation": {
+    "settings": 7,
+    "physics_rows": 84,
+    "methods": [
+      "Capacity Control",
+      "Full GA-NAR",
+      "Generic Geometry Control",
+      "Original Baseline"
+    ]
+  },
+  "nrgd": {
+    "benchmarks": [
+      "synthetic",
+      "ieee118_rich",
+      "coupled_duffing",
+      "allen_cahn_2d",
+      "shallow_water_2d"
+    ],
+    "rows": 5
+  },
+  "required_experiments": {
+    "entry_points": 8,
+    "all_present": true
+  },
+  "pass": true
+}

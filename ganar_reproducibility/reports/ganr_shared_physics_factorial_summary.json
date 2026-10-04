@@ -1,0 +1,562 @@
+[
+  {
+    "system": "allen_cahn",
+    "model": "fourier",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0165745776015136,
+    "nrmse_sd": 8.649649839809194e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "fourier",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.014695329626483499,
+    "nrmse_sd": 8.108186613999967e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "ganr",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0124758212986459,
+    "nrmse_sd": 1.6332881792265934e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "ganr",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.011845733501521467,
+    "nrmse_sd": 7.572274874895352e-06
+  },
+  {
+    "system": "allen_cahn",
+    "model": "gelu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.014370396952425033,
+    "nrmse_sd": 3.774627580793533e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "gelu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0120746051990757,
+    "nrmse_sd": 2.9410667608103118e-06
+  },
+  {
+    "system": "allen_cahn",
+    "model": "relu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.015405439521711634,
+    "nrmse_sd": 2.9670029891864905e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "relu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.013098637916992166,
+    "nrmse_sd": 6.263083825078373e-06
+  },
+  {
+    "system": "allen_cahn",
+    "model": "resmlp",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012171297387869533,
+    "nrmse_sd": 4.715337646406152e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "resmlp",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012138730671468534,
+    "nrmse_sd": 0.0001650347709354058
+  },
+  {
+    "system": "allen_cahn",
+    "model": "silu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.014629747689043402,
+    "nrmse_sd": 4.956344822237971e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "silu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012545980826589267,
+    "nrmse_sd": 6.515497167503646e-06
+  },
+  {
+    "system": "allen_cahn",
+    "model": "swiglu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012270200040495635,
+    "nrmse_sd": 3.2005141485727617e-05
+  },
+  {
+    "system": "allen_cahn",
+    "model": "swiglu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0105617450811831,
+    "nrmse_sd": 2.7671966325941587e-05
+  },
+  {
+    "system": "controlled",
+    "model": "fourier",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.02389846470730883,
+    "nrmse_sd": 0.0006747292082033965
+  },
+  {
+    "system": "controlled",
+    "model": "fourier",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.02063099303842497,
+    "nrmse_sd": 0.0005821073699710303
+  },
+  {
+    "system": "controlled",
+    "model": "ganr",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0051950734227237,
+    "nrmse_sd": 3.497756348234301e-05
+  },
+  {
+    "system": "controlled",
+    "model": "ganr",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.005595935429816699,
+    "nrmse_sd": 0.00012214492914446162
+  },
+  {
+    "system": "controlled",
+    "model": "gelu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.009678178326097334,
+    "nrmse_sd": 0.00010648158620931472
+  },
+  {
+    "system": "controlled",
+    "model": "gelu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.009015018481620767,
+    "nrmse_sd": 4.348649596872062e-05
+  },
+  {
+    "system": "controlled",
+    "model": "relu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012428525624915766,
+    "nrmse_sd": 7.22851700330605e-05
+  },
+  {
+    "system": "controlled",
+    "model": "relu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.011740543708383367,
+    "nrmse_sd": 4.5666702364208975e-05
+  },
+  {
+    "system": "controlled",
+    "model": "resmlp",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.007572891884904666,
+    "nrmse_sd": 0.0005543776205436554
+  },
+  {
+    "system": "controlled",
+    "model": "resmlp",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.007619267451237433,
+    "nrmse_sd": 0.0003976362254932282
+  },
+  {
+    "system": "controlled",
+    "model": "silu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012244720152069802,
+    "nrmse_sd": 0.00012648011544953824
+  },
+  {
+    "system": "controlled",
+    "model": "silu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.011620215215998667,
+    "nrmse_sd": 0.0001923221478767786
+  },
+  {
+    "system": "controlled",
+    "model": "swiglu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.007813541955589134,
+    "nrmse_sd": 0.0003633777104083676
+  },
+  {
+    "system": "controlled",
+    "model": "swiglu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.008595426204787702,
+    "nrmse_sd": 0.0001580660165945032
+  },
+  {
+    "system": "duffing",
+    "model": "fourier",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.020228675238652363,
+    "nrmse_sd": 0.0003526351864390355
+  },
+  {
+    "system": "duffing",
+    "model": "fourier",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.016798455655362966,
+    "nrmse_sd": 0.00026262563844424593
+  },
+  {
+    "system": "duffing",
+    "model": "ganr",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0032710794357225,
+    "nrmse_sd": 4.6646718586422435e-05
+  },
+  {
+    "system": "duffing",
+    "model": "ganr",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0026969739044614663,
+    "nrmse_sd": 6.614791206776822e-05
+  },
+  {
+    "system": "duffing",
+    "model": "gelu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0079914671551289,
+    "nrmse_sd": 3.983864326567321e-05
+  },
+  {
+    "system": "duffing",
+    "model": "gelu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.00552240095552,
+    "nrmse_sd": 2.5572646006598475e-06
+  },
+  {
+    "system": "duffing",
+    "model": "relu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.009486603930248133,
+    "nrmse_sd": 4.684562139241665e-05
+  },
+  {
+    "system": "duffing",
+    "model": "relu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.007690446403405733,
+    "nrmse_sd": 7.508180265807017e-05
+  },
+  {
+    "system": "duffing",
+    "model": "resmlp",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.004868279125161033,
+    "nrmse_sd": 0.00030298524997482234
+  },
+  {
+    "system": "duffing",
+    "model": "resmlp",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0028654158436840667,
+    "nrmse_sd": 0.00011708989853270442
+  },
+  {
+    "system": "duffing",
+    "model": "silu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0100964366178741,
+    "nrmse_sd": 9.74892227917594e-06
+  },
+  {
+    "system": "duffing",
+    "model": "silu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0060144584174680995,
+    "nrmse_sd": 1.1112580188459963e-05
+  },
+  {
+    "system": "duffing",
+    "model": "swiglu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.004888751618450533,
+    "nrmse_sd": 0.00011597010792617463
+  },
+  {
+    "system": "duffing",
+    "model": "swiglu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0027159199004866004,
+    "nrmse_sd": 2.393663830868407e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "fourier",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0142409057297332,
+    "nrmse_sd": 0.0004880560690316374
+  },
+  {
+    "system": "ieee118",
+    "model": "fourier",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0022224451526946663,
+    "nrmse_sd": 6.777353647284372e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "ganr",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.006589900219288801,
+    "nrmse_sd": 3.095017825942359e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "ganr",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0005435677908652,
+    "nrmse_sd": 5.324947810540341e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "gelu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0101830391275588,
+    "nrmse_sd": 8.679693776109026e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "gelu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0029662019205456,
+    "nrmse_sd": 8.507828667677537e-06
+  },
+  {
+    "system": "ieee118",
+    "model": "relu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.010252155956619467,
+    "nrmse_sd": 4.766383117132356e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "relu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.003396026752865433,
+    "nrmse_sd": 1.594179910948511e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "resmlp",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.007414527040832934,
+    "nrmse_sd": 8.71287201487954e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "resmlp",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0013363351961282997,
+    "nrmse_sd": 1.2240168867122948e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "silu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.010059690927273133,
+    "nrmse_sd": 6.069185433725311e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "silu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0026142968067706996,
+    "nrmse_sd": 6.183475044887144e-06
+  },
+  {
+    "system": "ieee118",
+    "model": "swiglu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.007815070917731067,
+    "nrmse_sd": 5.8042422856156866e-05
+  },
+  {
+    "system": "ieee118",
+    "model": "swiglu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0011648722615549998,
+    "nrmse_sd": 6.980796823055874e-06
+  },
+  {
+    "system": "shallow_water",
+    "model": "fourier",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.018159787644646333,
+    "nrmse_sd": 3.5237238768319076e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "fourier",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.018081560229312,
+    "nrmse_sd": 2.3322092329330597e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "ganr",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0068711862613889665,
+    "nrmse_sd": 2.1377978210636752e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "ganr",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.005829608351711267,
+    "nrmse_sd": 1.8936876183699318e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "gelu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.011009154080134934,
+    "nrmse_sd": 9.900906678303943e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "gelu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.006428933647796501,
+    "nrmse_sd": 1.657434268396039e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "relu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.013237755880521333,
+    "nrmse_sd": 9.213973245322906e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "relu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.008440594968457667,
+    "nrmse_sd": 1.2177256661440186e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "resmlp",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.011258206950562169,
+    "nrmse_sd": 2.935557947042577e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "resmlp",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0101328067032742,
+    "nrmse_sd": 7.787068307547719e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "silu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.0109986208630145,
+    "nrmse_sd": 0.00012421824050168847
+  },
+  {
+    "system": "shallow_water",
+    "model": "silu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.005961083416412167,
+    "nrmse_sd": 1.8319108880484536e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "swiglu",
+    "condition": "no_physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.012094756091922567,
+    "nrmse_sd": 7.667064983809362e-05
+  },
+  {
+    "system": "shallow_water",
+    "model": "swiglu",
+    "condition": "physics",
+    "seed_count": 3,
+    "nrmse_mean": 0.011798117544047367,
+    "nrmse_sd": 6.117686990316312e-06
+  }
+]

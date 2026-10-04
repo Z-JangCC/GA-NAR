@@ -1,0 +1,9 @@
+{
+  "system": "ieee118_acpf",
+  "n_raw": 512,
+  "geometry_coverage": 1.0,
+  "allocation_coverage": 1.0,
+  "h": 0.02,
+  "status": "resolved",
+  "probe_hash": "6be44e71c452fd32b88847005ea7aba02f14983b284f3712c3d3844bdae22aa7"
+}

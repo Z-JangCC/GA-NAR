@@ -1,0 +1,83 @@
+[
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "ganar_prebackbone",
+    "seed": 0,
+    "mse_std": 6.705364850438082e-07,
+    "mean_physical_residual": 0.005637753561820324,
+    "source_protocol": "ganar-optimized-final-v1"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "ganar_prebackbone",
+    "seed": 1,
+    "mse_std": 7.063928671011277e-07,
+    "mean_physical_residual": 0.005908633624531173,
+    "source_protocol": "ganar-optimized-final-v1"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "ganar_prebackbone",
+    "seed": 2,
+    "mse_std": 7.38621762942078e-07,
+    "mean_physical_residual": 0.0060923228145243,
+    "source_protocol": "ganar-optimized-final-v1"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_relu",
+    "seed": 0,
+    "mse_std": 5.169466723369047e-06,
+    "mean_physical_residual": 0.008665589788684733,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_relu",
+    "seed": 1,
+    "mse_std": 5.987716031668364e-06,
+    "mean_physical_residual": 0.008667969590636716,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_relu",
+    "seed": 2,
+    "mse_std": 6.932769926196391e-06,
+    "mean_physical_residual": 0.008135529885997708,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_swiglu",
+    "seed": 0,
+    "mse_std": 5.958788813165824e-07,
+    "mean_physical_residual": 0.0058891151206609494,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_swiglu",
+    "seed": 1,
+    "mse_std": 5.162008560653112e-07,
+    "mean_physical_residual": 0.0055573914920031145,
+    "source_protocol": "ganar-main-protocol"
+  },
+  {
+    "system": "ieee118_acpf",
+    "system_label": "IEEE-118 AC power flow",
+    "model": "pm_swiglu",
+    "seed": 2,
+    "mse_std": 4.923463460512073e-07,
+    "mean_physical_residual": 0.00492608388873974,
+    "source_protocol": "ganar-main-protocol"
+  }
+]
