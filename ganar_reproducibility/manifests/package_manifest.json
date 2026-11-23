@@ -41,6 +41,21 @@
       "sha256": "33c321b0bc633f115243e545f86c0e65340e11dd703ecd8a47224804928e4899"
     },
     {
+      "path": "assets/figures/figure_19_swiglu_activation.png",
+      "bytes": 297366,
+      "sha256": "dce2b3708487cd4aaca8324d85fa86dfef29dce5001d745494fbaed550d3e131"
+    },
+    {
+      "path": "assets/figures/figure_1_architecture.png",
+      "bytes": 1058783,
+      "sha256": "3a1c0ba91c3d7a9a0442d45618e7a7a97d1cd3d6089db9b3893535a5cfa68278"
+    },
+    {
+      "path": "assets/figures/figure_8_synthetic_response.png",
+      "bytes": 683816,
+      "sha256": "fecbfae976a3f5476f5de4af495c51527f3970501d4d8b50e6c1d54f0b87d066"
+    },
+    {
       "path": "configs/ga_nar_lw_controlled_ablation.yaml",
       "bytes": 534,
       "sha256": "2449cadce3ee5f7f3a7ce997df476fa364f7aa92dd02023a2dc564691fcd3ef9"
