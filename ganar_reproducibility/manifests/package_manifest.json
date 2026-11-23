@@ -7,8 +7,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5034,
-      "sha256": "db0bd92b78ab817a3624eaab2fd14dd0c7abfcce70bcd971f171f85e0fd73457"
+      "bytes": 943,
+      "sha256": "6b45a8da88242996ba4d3a6af18084c7467d69f4053f8dc07a74e80f60287a68"
     },
     {
       "path": "assets/Fig.2.svg",
@@ -206,6 +206,11 @@
       "sha256": "e5af7b719ea4cdd68330f74f9c661c673ebe3bdf321bab19091fed70c731d181"
     },
     {
+      "path": "experiments/run_ga_nar.py",
+      "bytes": 6413,
+      "sha256": "ddde85dc8648d99be03dd4b4b9b9058b177512df95ae1e3c7d229466efd8b570"
+    },
+    {
       "path": "experiments/run_ga_nar_lw_matrix.py",
       "bytes": 3765,
       "sha256": "db34af48f86bfa29ae42e833bec1d1a8eb9af124d552c8b008d9d20b53d19510"
@@ -232,8 +237,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 403,
-      "sha256": "73a4c9c8ed2758baa44b6df20222b168a92b6dea5ddffd25de79e6604dbc5648"
+      "bytes": 385,
+      "sha256": "aaa7ea2d02a7465a61ba1908be6a9299153550db4582419f1932e9c2a8f42a09"
     },
     {
       "path": "reports/ga_nar_lw_controlled_ablation.md",
@@ -554,6 +559,31 @@
       "path": "results/nrgd_five_benchmark_descriptor/state_augmented_router.csv",
       "bytes": 3110,
       "sha256": "a4961bf19b8ddcead9f6198ccdffe6326dad65c5ad5ac2af70adf7ff629248e7"
+    },
+    {
+      "path": "src/ga_nar/__init__.py",
+      "bytes": 305,
+      "sha256": "ced86979bd08cbdf9d261cfa06efa4a8a49954058b4022da21cb3bf7eb634062"
+    },
+    {
+      "path": "src/ga_nar/data.py",
+      "bytes": 3274,
+      "sha256": "0ccef3ff545f3aa9b6c73acdab8652bfaf95cf883df8f594ba79e22635db35e6"
+    },
+    {
+      "path": "src/ga_nar/geometry.py",
+      "bytes": 6459,
+      "sha256": "8154530e8e7a0397653c719c28b31deca512d9e6dbc6d2196d8a822d29c5a07a"
+    },
+    {
+      "path": "src/ga_nar/model.py",
+      "bytes": 8413,
+      "sha256": "b81dd39f8935b38833c8cb86a6f1ecc29dd63f5d1bd67ba67f1d3bfc379097be"
+    },
+    {
+      "path": "src/ga_nar/training.py",
+      "bytes": 3588,
+      "sha256": "ff191209175638eba7a97c5b563bb84260114491067710ebca61e8e8f5f69a16"
     },
     {
       "path": "src/ganar_lw_independent/__init__.py",
@@ -1294,6 +1324,11 @@
       "path": "src/nonlinear_geometry/training.py",
       "bytes": 15209,
       "sha256": "ac3b463a89cc4b35d5c61791ea6c8a3c9ccfdb020261dc36deea44ee4407c988"
+    },
+    {
+      "path": "tests/test_ga_nar.py",
+      "bytes": 4115,
+      "sha256": "77268d250e98090b733076d78700cc8a679bad68d3b393844306f29abda32245"
     },
     {
       "path": "verification/audit_result_records.py",

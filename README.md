@@ -1,187 +1,132 @@
 # GA-NAR
 
-**Geometry-aware neural approximation for implicit physical systems**
+**Geometry-Adaptive Nonlinearity Allocation and Representation for Complex Physical Systems**
 
-GA-NAR is a geometry-conditioned neural surrogate framework for solution maps
-defined implicitly by nonlinear physical equations. The project accompanies
-the GA-NAR ICLR 2027 submission and provides the code, benchmark data,
-experiment protocols, and numerical records needed to study the method.
+GA-NAR learns surrogates for solution maps defined by implicit physical equations.
+It combines Nonlinear Response Geometry Decomposition (NRGD), which measures
+finite-scale variation of the physical solution Jacobian, with Geometry-Adaptive
+Nonlinear Representation (GANR), which conditions a residual network on that
+geometry. This repository provides the method implementation, benchmark data,
+experiment protocols, numerical records, and verification tools accompanying
+the manuscript.
 
-## What this project studies
+## Method
 
-Many physical models define the state `z` through an implicit relation
-`F(z, x) = 0`. A surrogate must therefore approximate a response map whose
-local sensitivity changes across the input domain. GA-NAR uses a
-Jacobian-derived geometry descriptor to expose that structure to a neural
-representation. GA-NAR-LW further applies the descriptor at every hidden
-layer, while allowing the backbone activation to be changed independently.
+NRGD constructs a global Dominant Nonlinear-Response Subspace (DRS) projector
+from training-only directional response measurements. It also estimates two
+operating-point descriptors: bounded local response intensity and the allocation
+of response between the DRS and its orthogonal complement. The projector acts on
+standardized inputs; both subspaces remain available to the model.
 
-The central equations are provided as pre-rendered SVG assets, so they remain
-visible on documentation platforms that do not provide MathJax or KaTeX.
+GANR encodes the two projected inputs separately. A shared controller predicts
+intensity, two-way subspace allocation, and a softmax allocation across network
+depth. At each residual block, separate fixed-highway plus trainable low-rank
+projections map the branch codes into gate coordinates. The resulting direction
+is RMS-matched to the block's unshifted gate and added before its activation.
+The intensity and subspace allocation are supervised by NRGD descriptors;
+depth allocation is learned from prediction loss. SwiGLU modifies only its gate
+branch. Setting the adapter scale to zero exactly recovers the same backbone.
 
-<p align="center"><img src="ganar_reproducibility/assets/equations/implicit_jacobian.svg" width="360" alt="Implicit system and implicit Jacobian"></p>
+The [architecture diagram](ganar_reproducibility/assets/Fig.2.svg) summarizes
+the physical-geometry-to-network path. The implementation is in
+[`ga_nar.model`](ganar_reproducibility/src/ga_nar/model.py); the data,
+training, and command-line interfaces are in the same package and
+[`experiments/run_ga_nar.py`](ganar_reproducibility/experiments/run_ga_nar.py).
+For a new physical system, [`build_response_geometry`](ganar_reproducibility/src/ga_nar/geometry.py)
+accepts training-only standardized operating points and a callable returning
+the physical solution Jacobian applied to a vector. It estimates the
+finite-scale response, DRS projector, intensity, and two-way allocation. The
+caller supplies a Jacobian action valid on the selected regular solution branch.
+The trained model's inference path does not call the physical solver or
+Jacobian action.
 
-The response geometry is estimated from directional sensitivities. Its
-eigenvectors define the dominant response subspace:
+## Install
 
-<p align="center"><img src="ganar_reproducibility/assets/equations/response_operator.svg" width="470" alt="Response operator and dominant response subspace"></p>
-
-The rank R is selected from cumulative response mass. For an input x, the two
-branches are x<sub>R</sub> = P<sub>R</sub>x and
-x<sub>⊥</sub> = (I<sub>d</sub> − P<sub>R</sub>)x. Together with local response
-intensity ρ<sub>G</sub><sup>⋆</sup>(x) and allocation
-π<sub>G</sub><sup>⋆</sup>(x), they define the NRGD descriptor:
-
-<p align="center"><img src="ganar_reproducibility/assets/equations/geometry_descriptor.svg" width="420" alt="NRGD geometry descriptor"></p>
-
-The local intensity is the normalized trace of the local geometry matrix G(x).
-Its allocation coordinates π<sub>G,i</sub><sup>⋆</sup>(x) are the response mass
-of mode u<sub>i</sub> divided by the total response, and sum to one.
-
-For each hidden layer, GA-NAR-LW forms a geometry-conditioned additive gate:
-
-<p align="center"><img src="ganar_reproducibility/assets/equations/layerwise_modulation.svg" width="560" alt="Layer-wise geometry modulation"></p>
-
-Here e<sub>R</sub> and e<sub>⊥</sub> are the dominant and complementary
-geometry embeddings, β<sub>ℓ</sub>(x) distributes modulation energy across
-depth, and RMS normalization matches the modulation to the backbone gate
-scale. The modulated gate is passed to the selected activation block. For
-SwiGLU, only its gate branch is modulated. The depth weights form a softmax
-over all blocks and therefore sum to one.
-
-The physical consistency metric reported by the experiments is
-
-<p align="center"><img src="ganar_reproducibility/assets/equations/physics_residual.svg" width="180" alt="Physics residual"></p>
-
-where d<sub>z</sub> is the state dimension. The implementation uses additive gate
-modulation rather than feature-wise affine modulation.
-
-## GA-NAR architecture
-
-The diagram summarizes the system-to-network pathway. The physical system
-provides standardized input x to the NRGD input head. NRGD first estimates a
-global Dominant Nonlinear-Response Subspace (DRS), represented by the projector
-P<sub>R</sub>. It also produces two operating-point descriptors: local response
-intensity ρ<sub>G</sub><sup>⋆</sup>(x) and dominant/complement allocation
-π<sub>G</sub><sup>⋆</sup>(x).
-
-The input is then decomposed into dominant and complementary channels,
-x<sub>R</sub> = P<sub>R</sub>x and
-x<sub>⊥</sub> = (I<sub>d</sub> − P<sub>R</sub>)x. Separate encoders preserve
-these channels as e<sub>R</sub> and e<sub>⊥</sub>; the shared controller combines
-them with x and predicts the neural intensity, branch composition, and
-depth-allocation vector β. The physical descriptors supervise intensity and
-branch composition, while β is learned from the predictive objective because
-network depth is not a physical coordinate.
-
-At every nonlinear block, the two encoded channels are mapped into the block's
-preactivation coordinates. Their learned branch projections are mixed according
-to π, scaled by ρ and β, and RMS-matched to the baseline preactivation. The
-resulting additive modulation is injected before the activation. This preserves
-the selected activation family rather than replacing it; for SwiGLU, the
-modulation is applied only to the gate branch. The output head then maps the
-modulated backbone state to the predicted physical state.
-
-Geometry construction, physical Jacobian actions, and descriptor targets are
-used only during training and independent evaluation. Inference uses the frozen
-descriptor and neural forward path without querying the physical solver.
-
-![GA-NAR architecture](ganar_reproducibility/assets/Fig.2.svg)
-
-*GA-NAR architecture. NRGD extracts physical response geometry, and GANR
-converts it into layer-wise nonlinear modulation through dual-subspace
-encoding, a shared controller, scale-matched projections, RMS normalization,
-activation blocks, and the output head.*
-
-## Experimental program
-
-The repository is organized around the four experiment families used in the
-submission:
-
-| Component | Purpose | Experimental scope |
-| --- | --- | --- |
-| **NRGD** | Extract and route Jacobian-informed geometry | Synthetic 50→50, IEEE-118 rich, coupled Duffing, Allen–Cahn 2D, shallow-water 2D |
-| **GANR** | Compare geometry-aware representations under matched physics conditions | Five systems, seven model variants, two physics conditions, three seeds |
-| **GA-NAR-LW** | Evaluate activation-matched layer-wise geometry conditioning | IEEE-118, Kuramoto-64, and nonlinear heat FEM with six activations |
-| **Controlled ablation** | Separate capacity, generic geometry information, and structured modulation | Seven settings, four models, three seeds, including physics residuals |
-
-The main package is [`ganar_reproducibility/`](./ganar_reproducibility/).
-It contains the implementation and numerical artifacts for these experiments;
-manuscript files, rendered figures, exploratory search outputs, and checkpoints
-are intentionally kept outside the source repository.
-
-## Quick start
+Python 3.10 or newer is required. From the repository root:
 
 ```bash
 cd ganar_reproducibility
 python -m pip install -e .
-
-# Inspect the committed numerical records
-PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src \
-  python verification/verify_final_reproduction.py
-PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src \
-  python verification/audit_result_records.py
-
-# Run a small CPU geometry example
-PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src \
-  python experiments/run_nrgd_five_benchmark.py \
-  --mode smoke --benchmark synthetic --centers 8 \
-  --directions-per-center 2 \
-  --output-root local_reproduction_results/nrgd_smoke
-
-# Run one activation-matched GA-NAR-LW training pair
-PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src \
-  python experiments/run_ga_nar_lw_matrix.py \
-  --system ieee118_acpf --models pm_relu,ganar_relu \
-  --seeds 0 --epochs 1 --workers 1 --device cpu \
-  --lambda-rho 0.5 --lambda-pi 0.5
 ```
 
-For the complete registered protocol, use:
+The packaged benchmark data contain fixed train, validation, and held-out test
+splits, together with geometry descriptors for IEEE-118 AC power flow,
+Kuramoto-64, and nonlinear heat FEM. Their checksums are recorded with each
+trained checkpoint. Use the same standardized input coordinates when supplying
+a custom projector or descriptor set.
+
+## Train and evaluate
+
+The following example trains the full layer-wise method on one system and
+activation. Output files are written to an ignored local directory.
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src \
-  python experiments/reproduce_all.py --stage all
+python experiments/run_ga_nar.py train \
+  --system ieee118_acpf --activation relu --seed 0 \
+  --epochs 400 --device cpu \
+  --output local_training_results/ga_nar/ieee118_relu
+
+python experiments/run_ga_nar.py evaluate \
+  --checkpoint local_training_results/ga_nar/ieee118_relu/model.pt
 ```
 
-Generated training outputs are written to local ignored directories. The
-complete protocol is staged so that geometry descriptors and seed-matched
-baseline models are available before paired GA-NAR-LW runs.
+The `train` command fits the prediction loss and NRGD intensity/allocation
+losses on training data, selects an epoch by validation MSE, then reports the
+held-out standardized MSE. `evaluate` recomputes that metric and rejects
+changed source data or geometry. To predict physical states from a NumPy array
+of unstandardized physical inputs with shape `(samples, input_dim)`:
 
-## Package structure
+```bash
+python experiments/run_ga_nar.py predict \
+  --checkpoint local_training_results/ga_nar/ieee118_relu/model.pt \
+  --input inputs.npy --output predictions.npy
+```
+
+The checkpoint stores training normalization and the frozen projector, so the
+prediction command does not require a physical solver or geometry target files.
+Reproducing the full manuscript tables requires the registered experiment
+protocols and substantially more computation than this single-run example.
+
+## Repository layout
 
 ```text
 ganar_reproducibility/
-├── configs/          experiment protocols and final hyperparameters
-├── data_store/       frozen datasets, probes, and geometry artifacts
-├── experiments/      training, evaluation, and report entry points
-├── manifests/        data lineage and result traceability
-├── reports/          compact machine-readable summaries
-├── results/          numerical records used by the submission
-├── src/              NRGD, GANR, GA-NAR-LW, and physics implementations
-└── verification/     result and package consistency checks
+  src/ga_nar/       layer-wise method, data contract, training
+  src/             NRGD, auxiliary studies, and benchmark implementations
+  experiments/     method and registered experiment entry points
+  configs/         experiment settings
+  data_store/      fixed benchmark and geometry artifacts
+  results/         archived numerical records
+  verification/    package and result-record checks
 ```
 
-## Artifact availability
+The archived experiment records preserve their original model and result
+identifiers for traceability. The `ga_nar` package and command above are the
+public entry point for the manuscript's complete layer-wise adapter. Archived
+records should not be interpreted as output from a fresh run of that entry
+point. Large trained weights are available separately in the
+[repository releases](https://github.com/Z-JangCC/GA-NAR/releases).
 
-The source package is the primary artifact for reviewing the method and
-reproducing the numerical study: it contains the implementation, frozen input
-data, protocols, and result records. The trained models used for the reported
-runs are provided separately in the [companion model archive](https://github.com/Z-JangCC/GA-NAR/releases/tag/final-submission-reproducibility),
-with a machine-readable manifest and per-file checksums. Keeping these large
-binary artifacts in the release area keeps the source history lightweight while
-preserving access to the exact trained models.
+## Verification
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src pytest -q tests/test_ga_nar.py
+PYTHONDONTWRITEBYTECODE=1 python verification/verify_clean_package.py
+PYTHONDONTWRITEBYTECODE=1 python verification/audit_result_records.py
+```
+
+The verification scripts check method behavior, distributed-file checksums,
+and numerical-record consistency. Full benchmark retraining is separate from
+these checks.
 
 ## Citation
 
 ```bibtex
-@inproceedings{ganar2027,
-  title     = {GA-NAR: Geometry-Aware Neural Approximation for Implicit Physical Systems},
-  booktitle = {International Conference on Learning Representations},
-  year      = {2027}
+@misc{ganar,
+  title = {GA-NAR: Geometry-Adaptive Nonlinearity Allocation and Representation for Complex Physical Systems},
+  note  = {Manuscript and accompanying code}
 }
 ```
 
-Please report reproducibility issues with the command, environment, and
-relevant output. Changes to experiment code should preserve the published
-protocols and update the corresponding numerical traceability records.
+Please include the system, command, software environment, and relevant output
+when reporting a reproducibility issue.
