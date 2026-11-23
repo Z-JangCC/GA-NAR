@@ -10,7 +10,7 @@ geometry. This repository provides the method implementation, benchmark data,
 experiment protocols, numerical records, and verification tools accompanying
 the manuscript.
 
-## Method and figures
+## Overview
 
 NRGD constructs a global Dominant Nonlinear-Response Subspace (DRS) projector
 from training-only directional response measurements. It also estimates two
@@ -18,25 +18,21 @@ operating-point descriptors: bounded local response intensity and the allocation
 of response between the DRS and its orthogonal complement. The projector acts on
 standardized inputs; both subspaces remain available to the model.
 
-GANR encodes the two projected inputs separately. A shared controller predicts
-intensity, two-way subspace allocation, and a softmax allocation across network
-depth. At each residual block, separate fixed-highway plus trainable low-rank
-projections map the branch codes into gate coordinates. The resulting direction
-is RMS-matched to the block's unshifted gate and added before its activation.
-The intensity and subspace allocation are supervised by NRGD descriptors;
-depth allocation is learned from prediction loss. SwiGLU modifies only its gate
-branch. Setting the adapter scale to zero exactly recovers the same backbone.
-
-### Figure 1: GA-NAR architecture
+GANR encodes the dominant and complementary inputs separately, predicts
+sample-dependent control variables, and shifts the preactivation at each
+residual block. It preserves the chosen activation family, including SwiGLU's
+unchanged value branch. NRGD targets supervise intensity and subspace
+allocation; depth allocation is learned through prediction loss.
 
 <p align="center"><a href="ganar_reproducibility/assets/figures/figure_1_architecture.png"><img src="ganar_reproducibility/assets/figures/figure_1_architecture.png" width="1000" alt="Figure 1: NRGD extracts physical response geometry; GANR routes it into the nonlinear blocks of a residual backbone"></a></p>
 
-*Figure 1. NRGD constructs the global DRS projector and local response
-descriptors. GANR maps their dominant and complementary channels into
-layer-specific preactivations. Physical Jacobian measurements provide training
-targets; the trained predictor runs without the physical solver.*
+*Figure 1. GA-NAR architecture: NRGD extracts physical response geometry and
+GANR uses it to modulate nonlinear preactivations across the backbone. Physical
+Jacobian measurements are needed to build training targets, but not at inference.*
 
-### NRGD: from physical response to descriptors
+## How it works
+
+### Response geometry
 
 For standardized input $x$ and state $y=G_s(x)$, the physical solution map is
 defined locally by an implicit equation. NRGD measures finite-scale variation
@@ -58,7 +54,7 @@ operator and its global DRS projector:
 \widehat S_G&=\frac1{N_GK_S}\sum_{i=1}^{N_G}\sum_{j=1}^{K_S}
   \widehat r_G^{h_\pi^\star}(x_i,s_{ij})s_{ij}s_{ij}^{\top},\\
 \widehat M_G&=\Pi_{\Delta_+}\!\left(
-  \frac{(d+2)\widehat S_G/\operatorname{tr}(\widehat S_G)-I_d}{2}
+  \frac{(d+2)\widehat S_G/\mathrm{tr}(\widehat S_G)-I_d}{2}
   \right),\qquad P_R=U_{1:R}U_{1:R}^{\top}.
 \end{aligned}
 ```
@@ -82,13 +78,12 @@ All geometry centers and probe directions are drawn from the training protocol.
 
 <p align="center"><a href="ganar_reproducibility/assets/figures/figure_8_synthetic_response.png"><img src="ganar_reproducibility/assets/figures/figure_8_synthetic_response.png" width="620" alt="Figure 8: synthetic implicit state surface, finite-scale Jacobian response, local intensity, and subspace allocation"></a></p>
 
-*Figure 8. Synthetic implicit system. On the section $q_4=0$, the state
-coordinate $z_4$ varies through coupled parameters. The panels connect
-finite-scale Jacobian responses to global orientation, local intensity, and
-dominant/complement allocation. The state surface and response descriptors
-show different properties of the same solution map.*
+*Figure 8. Synthetic implicit system: the state surface on $q_4=0$ is shown
+alongside finite-scale response, global orientation, local intensity, and
+dominant/complement allocation. These descriptors capture response properties
+that the state surface alone does not specify.*
 
-### GANR: geometry-conditioned nonlinear computation
+### Layer-wise modulation
 
 GANR retains both projected inputs, $x_R=P_Rx$ and
 $x_\perp=(I_d-P_R)x$. Their encoders produce $e_R$ and $e_\perp$. At block
@@ -104,8 +99,8 @@ a_\ell^{\rm geo}(x)&=
 \sqrt{\pi_{\phi,\perp}(x)}\,\mathcal P_{\ell,\perp}(e_\perp(x)),\\
 \widetilde a_\phi^{(\ell)}(x)&=
 \rho_\phi(x)\sqrt{\beta_{\phi,\ell}(x)}\,
-\frac{a_\ell^{\rm geo}(x)}{\operatorname{RMS}(a_\ell^{\rm geo}(x))+\epsilon_A}
-\operatorname{RMS}(u_\ell(x)),\\
+\frac{a_\ell^{\rm geo}(x)}{\mathrm{RMS}(a_\ell^{\rm geo}(x))+\epsilon_A}
+\mathrm{RMS}(u_\ell(x)),\\
 \widetilde u_\ell&=u_\ell+\alpha_A\widetilde a_\phi^{(\ell)}.
 \end{aligned}
 ```
@@ -116,18 +111,16 @@ the resulting gate-induced output difference:
 
 ```math
 d_{\ell j}^{\mathrm{SwiGLU}}(x)=
-\left[\operatorname{SiLU}(u_{\ell j}+\delta_{\ell j})-
-\operatorname{SiLU}(u_{\ell j})\right]v_{\ell j}.
+\left[\mathrm{SiLU}(u_{\ell j}+\delta_{\ell j})-
+\mathrm{SiLU}(u_{\ell j})\right]v_{\ell j}.
 ```
 
 <p align="center"><a href="ganar_reproducibility/assets/figures/figure_19_swiglu_activation.png"><img src="ganar_reproducibility/assets/figures/figure_19_swiglu_activation.png" width="850" alt="Figure 19: signed SwiGLU gate-induced output changes and binned RMS magnitude in four IEEE-118 residual blocks"></a></p>
 
-*Figure 19. IEEE-118 SwiGLU activation-output changes across four residual
-blocks. Each blue hexagon aggregates validation-sample by gate-neuron positions
-with the indicated signed change; darker blue means more positions. The red
-curve is the root-mean-square magnitude of those changes within bins of the
-unshifted gate preactivation. Nonzero responses across blocks show that the
-modulation reaches the nonlinear site; the plot alone does not measure test
+*Figure 19. SwiGLU response on IEEE-118 across four residual blocks. Blue
+hexagons show the density of signed gate-output changes over validation samples
+and gate neurons; the red line shows binned RMS change against the unshifted
+gate preactivation. The plot measures internal activation change, not test
 accuracy.*
 
 The training objective combines prediction MSE with NRGD supervision of
@@ -154,7 +147,7 @@ caller supplies a Jacobian action valid on the selected regular solution branch.
 The trained model's inference path does not call the physical solver or
 Jacobian action.
 
-## Install
+## Installation
 
 Python 3.10 or newer is required. From the repository root:
 
@@ -169,7 +162,7 @@ Kuramoto-64, and nonlinear heat FEM. Their checksums are recorded with each
 trained checkpoint. Use the same standardized input coordinates when supplying
 a custom projector or descriptor set.
 
-## Train and evaluate
+## Quick start
 
 The following example trains the full layer-wise method on one system and
 activation. Output files are written to an ignored local directory.
@@ -201,7 +194,7 @@ prediction command does not require a physical solver or geometry target files.
 Reproducing the full manuscript tables requires the registered experiment
 protocols and substantially more computation than this single-run example.
 
-## Repository layout
+## Repository structure
 
 ```text
 ganar_reproducibility/
